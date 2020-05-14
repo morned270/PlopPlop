@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+
+    android:layout_margin="30dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="내 로그북"
+        android:layout_marginBottom="80dp"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="누적"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="00회"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="254dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="로그북 추가하기" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="내 로그북 열람하기" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab1"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab2"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab3"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab4"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
