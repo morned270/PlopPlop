@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="course">
+        <item>PADI OW(오픈워터)</item>
+        <item>PADI AOW(어드벤스드오픈워터)</item>
+        <item>PADI R(레스큐)</item>
+        <item>PADI MSD(마스터)</item>
+        <item>기타 자격증(SSI, NAUI등)</item>
+    </string-array>
+</resources>

@@ -46,7 +46,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Btn_addLB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
@@ -54,7 +54,7 @@
             android:text="로그북 추가하기" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/Btn_ShowLB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
@@ -67,26 +67,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="70dp"
+        <ImageButton
+            android:id="@+id/Btn_M_LB"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_tab1"
-            android:layout_marginRight="5dp"/>
-        <ImageView
-            android:layout_width="70dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_tab1" />
+
+        <ImageButton
+            android:id="@+id/Btn_M_C"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_tab2"
-            android:layout_marginRight="5dp"/>
-        <ImageView
-            android:layout_width="70dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_tab2" />
+
+        <ImageButton
+            android:id="@+id/Btn_M_Q"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_tab3"
-            android:layout_marginRight="5dp"/>
-        <ImageView
-            android:layout_width="70dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_tab3" />
+
+        <ImageButton
+            android:id="@+id/Btn_M_MP"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_tab4"
-            android:layout_marginRight="5dp"/>
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_tab4" />
 
     </LinearLayout>
 

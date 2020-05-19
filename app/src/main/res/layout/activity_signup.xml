@@ -18,29 +18,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/border"
-        android:padding="20dp"
         android:layout_marginBottom="60dp"
-        >
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/ic_image"/>
+            app:srcCompat="@drawable/ic_image" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="아이디"/>
+                android:text="닉네임"
+                android:textSize="20dp" />
 
             <EditText
+                android:id="@+id/Text_SU_NAME"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -48,16 +48,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="비밀번호" />
+                android:text="아이디"
+                android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/Text_SU_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/Text_SU_PW"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -68,17 +85,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="과정"/>
+                android:text="과정"
+                android:textSize="20dp" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/Spn_SU_C"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
@@ -86,28 +102,12 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="현재 로그북 수"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
 
     </LinearLayout>
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Btn_SU_OK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
