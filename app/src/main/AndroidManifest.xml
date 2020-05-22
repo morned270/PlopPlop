@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".InitialActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".Logbook3Activity"></activity>
     </application>
 
 </manifest>
