@@ -40,7 +40,7 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/Text_SU_NAME"
+                android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -57,7 +57,7 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/Text_SU_ID"
+                android:id="@+id/et_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -74,7 +74,7 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/Text_SU_PW"
+                android:id="@+id/et_pass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -82,7 +82,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <!-- <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -94,12 +94,30 @@
                 android:textSize="20dp" />
 
             <Spinner
-                android:id="@+id/Spn_SU_C"
+                android:id="@+id/sp_course"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
 
+        </LinearLayout> -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="코스"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/et_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
 
@@ -107,7 +125,7 @@
 
 
     <Button
-        android:id="@+id/Btn_SU_OK"
+        android:id="@+id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

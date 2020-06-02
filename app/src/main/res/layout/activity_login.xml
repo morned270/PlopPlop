@@ -37,7 +37,7 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/Text_ID"
+                android:id="@+id/et_id"
                 android:layout_width="226dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -54,7 +54,7 @@
                 android:text="비밀번호" />
 
             <EditText
-                android:id="@+id/Text_PW"
+                android:id="@+id/et_pass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -75,7 +75,7 @@
         >
 
         <Button
-            android:id="@+id/Btn_Signup"
+            android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -85,7 +85,7 @@
             android:text="회원가입" />
 
         <Button
-            android:id="@+id/Btn_Login"
+            android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
