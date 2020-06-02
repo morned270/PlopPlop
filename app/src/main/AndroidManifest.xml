@@ -19,7 +19,8 @@
         <activity android:name=".InitialActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".Logbook3Activity"></activity>
+        <activity android:name=".Logbook3Activity" />
+        <activity android:name=".Logbook4Activity"></activity>
     </application>
 
 </manifest>
