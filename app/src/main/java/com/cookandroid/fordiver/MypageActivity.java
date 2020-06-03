@@ -7,22 +7,22 @@ import android.widget.TextView;
 
 public class MypageActivity extends AppCompatActivity {
 
-    private TextView tv_course, tv_pass;
+    private TextView tv_name, tv_course;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
 
+        tv_name = findViewById(R.id.tv_name);
         tv_course = findViewById(R.id.tv_course);
-        tv_pass = findViewById(R.id.tv_pass);
 
         Intent intent = getIntent();
+        String userName = intent.getStringExtra("userName");
         String userCourse = intent.getStringExtra("userCourse");
-        String userPass = intent.getStringExtra("userPass");
 
+        tv_name.setText(userName);
         tv_course.setText(userCourse);
-        tv_pass.setText(userPass);
 
     }
 }
