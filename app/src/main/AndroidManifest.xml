@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".InitialActivity">
+        <activity android:name=".Logbook3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".Logbook3Activity" />
+        <activity android:name=".Logbook2Activity" />
         <activity android:name=".Logbook4Activity" />
         <activity android:name=".Logbook5Activity" />
         <activity android:name=".MypageActivity"></activity>
