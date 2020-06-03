@@ -34,14 +34,14 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@+id/sw"
+            android:layout_toLeftOf="@+id/switchlogview"
             android:text="날짜"
             android:textColor="#0948ae"
             android:textSize="15dp"
             android:textStyle="bold" />
 
         <Switch
-            android:id="@+id/sw"
+            android:id="@+id/switchlogview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/sw"
+            android:layout_toRightOf="@+id/switchlogview"
             android:text="지도"
             android:textColor="#3aefa1"
             android:textSize="15dp"
