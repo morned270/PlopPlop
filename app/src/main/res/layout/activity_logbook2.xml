@@ -30,13 +30,38 @@
             android:text="00회"
             android:textSize="20dp" />
 
-        <Switch
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:showText="true"
-            android:textOff="날짜"
-            android:textOn="위치" />
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/sw"
+            android:text="날짜"
+            android:textColor="#0948ae"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/sw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:thumb="@drawable/switch_thumb_selector"
+            android:track="@drawable/switch_track_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/sw"
+            android:text="지도"
+            android:textColor="#3aefa1"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -44,15 +69,15 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="292dp"
+        android:layout_height="295dp"
         android:gravity="center"
         android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="구글맵 들어갈 자리" />
+        <ListView
+            android:id="@+id/listview1"
+            android:layout_width="match_parent"
+            android:layout_height="303dp" />
     </LinearLayout>
 
     <LinearLayout
