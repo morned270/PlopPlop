@@ -20,9 +20,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/banana"
-        android:textSize="50dp"
-        android:text="안녕"
-        />
+        android:text="퐁당퐁당"
+        android:textSize="50dp" />
 
 
 </LinearLayout>
