@@ -13,9 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //로그인 액티비티로 이동
-        Intent intent_li = new Intent(MainActivity.this, LoginActivity.class) ;
-        startActivity(intent_li);
 
 
     }

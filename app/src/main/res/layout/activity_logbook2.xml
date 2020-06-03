@@ -29,6 +29,7 @@
             android:gravity="center"
             android:text="00회"
             android:textSize="20dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,15 +69,15 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="292dp"
+        android:layout_height="295dp"
         android:gravity="center"
         android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="구글맵 들어갈 자리" />
+        <ListView
+            android:id="@+id/listview1"
+            android:layout_width="match_parent"
+            android:layout_height="303dp" />
     </LinearLayout>
 
     <LinearLayout
