@@ -38,7 +38,7 @@
             android:layout_toLeftOf="@+id/sw"
             android:text="날짜"
             android:textColor="#0948ae"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
         <Switch
@@ -60,7 +60,7 @@
             android:layout_toRightOf="@+id/sw"
             android:text="지도"
             android:textColor="#3aefa1"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
 
