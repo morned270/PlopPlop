@@ -25,7 +25,7 @@ import org.w3c.dom.Text;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private EditText et_id, et_pass, et_name, et_course;
+    private EditText et_id, et_pass, et_name;
     private Button btn_register;
 
     @Override
@@ -34,16 +34,16 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         //spinner 리스트에 추가하기
-        /*final String[] data =getResources().getStringArray(R.array.course);
+        final String[] data =getResources().getStringArray(R.array.course);
         ArrayAdapter<String> adapter =new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,data);
-        Spinner spinner = (Spinner)findViewById(R.id.sp_course);
-        spinner.setAdapter(adapter);*/
+        final Spinner spinner = (Spinner)findViewById(R.id.sp_course);
+        spinner.setAdapter(adapter);
+
 
         // 아이디 값 찾아주기
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
         et_name = findViewById(R.id.et_name);
-        et_course = findViewById(R.id.et_course);
 
 // 회원가입 버튼 클릭 시 수행
         btn_register = findViewById(R.id.btn_register);
@@ -54,7 +54,7 @@ public class SignupActivity extends AppCompatActivity {
                 String userID = et_id.getText().toString();
                 String userPass = et_pass.getText().toString();
                 String userName = et_name.getText().toString();
-                String userCourse = et_course.getText().toString();
+                String userCourse = spinner.getSelectedItem().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
