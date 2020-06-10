@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Logbook3Activity"
+    tools:context=".Logbook2Activity"
     android:orientation="vertical"
     android:layout_margin="30dp">
 
@@ -83,38 +83,5 @@
             android:layout_height="303dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageButton
-            android:id="@+id/Btn_M_LB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab1" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab2" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_Q"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab3" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_MP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab4" />
-
-    </LinearLayout>
 
 </LinearLayout>
