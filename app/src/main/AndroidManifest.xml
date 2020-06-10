@@ -13,15 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".InitialActivity">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Logbook2Activity">
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
@@ -29,6 +22,11 @@
         <activity android:name=".Logbook4Activity" />
         <activity android:name=".Logbook5Activity" />
         <activity android:name=".MypageActivity"></activity>
+        <activity android:name=".InitialActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>

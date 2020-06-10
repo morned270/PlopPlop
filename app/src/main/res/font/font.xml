@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--regular-->
     <font
-        android:fontStyle = "normal"
-        android:fontWeight = "400"
-        android:font = "@font/banana"/>
+        android:font="@font/binggrae"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/binggrae"
+        app:fontStyle="normal"
+        app:fontWeight="500" />
+
 </font-family>
