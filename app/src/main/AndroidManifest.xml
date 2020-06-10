@@ -19,14 +19,13 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".Logbook3Activity" />
         <activity android:name=".Logbook4Activity" />
-        <activity android:name=".Logbook5Activity" />
+        <activity android:name=".Logbook5Activity" ><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".MypageActivity" />
         <activity android:name=".InitialActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Quiz3Activity"></activity>
     </application>

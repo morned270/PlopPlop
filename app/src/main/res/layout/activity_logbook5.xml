@@ -43,7 +43,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="232dp"
+        android:layout_height="283dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
@@ -52,7 +52,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/ScrollView1"
             android:layout_width="match_parent"
-            android:layout_height="235dp">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                             android:layout_weight="1"
                             android:checked="false"
                             android:text="난파선"
-                            android:textSize="7dp" />
+                            android:textSize="8dp" />
 
                         <CheckBox
                             android:id="@+id/check_PiT_2"
@@ -139,7 +139,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="산호초"
-                            android:textSize="7dp" />
+                            android:textSize="8dp" />
 
                         <CheckBox
                             android:id="@+id/check_PiT_3"
@@ -147,7 +147,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="동굴"
-                            android:textSize="7dp" />
+                            android:textSize="8dp" />
 
                         <CheckBox
                             android:id="@+id/check_PiT_4"
@@ -155,7 +155,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="밤/일몰"
-                            android:textSize="7dp" />
+                            android:textSize="8dp" />
 
                         <CheckBox
                             android:id="@+id/check_PiT_5"
@@ -163,7 +163,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Deep"
-                            android:textSize="7dp" />
+                            android:textSize="10dp" />
 
                         <CheckBox
                             android:id="@+id/check_PiT_6"
@@ -171,11 +171,12 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Ice"
-                            android:textSize="7dp" />
+                            android:textSize="10dp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 //수면부분
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -230,7 +231,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="time"/>
+                            android:inputType="time" />
 
                         <View
                             android:layout_width="0dp"
@@ -253,9 +254,10 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="time"/>
+                            android:inputType="time" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -291,7 +293,7 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="time"/>
+                            android:inputType="time" />
 
                         <View
                             android:layout_width="0dp"
@@ -306,15 +308,17 @@
 
 
                     </LinearLayout>
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/wave"
-                        android:scaleType="fitXY" />
+                        android:scaleType="fitXY"
+                        android:src="@drawable/wave" />
                 </LinearLayout>
                 //수면부분 끝
 
                 //수중부분
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -455,6 +459,7 @@
 
                     </LinearLayout>
                     //최대수심, 평균수심 edittext 끝
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -471,7 +476,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp" />
+
                         <View
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -482,17 +488,41 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:text="상승속도준수" />
+
                         <CheckBox
                             android:id="@+id/LB_IP_13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp" />
 
                     </LinearLayout>
                     //최대수심, 평균수심 text 끝
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="메모" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="*관찰한 수중생물, 느낀 점, etc"
+                    android:textSize="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
             </LinearLayout>
         </ScrollView>
 
@@ -501,13 +531,13 @@
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:text="사진 첨부하기" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:text="다이빙 마스터 확인" />
 
     <LinearLayout
@@ -517,14 +547,14 @@
         <ImageButton
             android:id="@+id/Btn_M_LB"
             android:layout_width="wrap_content"
-            android:layout_height="90dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/photo" />
 
         <ImageButton
             android:id="@+id/Btn_M_C"
             android:layout_width="wrap_content"
-            android:layout_height="90dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/location" />
 
