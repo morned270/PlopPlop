@@ -15,7 +15,7 @@ public class MenuActivity extends AppCompatActivity {
     private FragmentTransaction ft;
     private MainActivity frag1;
     private CommunityActivity frag2;
-    private QuizActivity frag3;
+    private Quiz1Activity frag3;
     private MypageActivity frag4;
 
     @Override
@@ -46,7 +46,7 @@ public class MenuActivity extends AppCompatActivity {
         });
         frag1 = new MainActivity();
         frag2 = new CommunityActivity();
-        frag3 = new QuizActivity();
+        frag3 = new Quiz1Activity();
         frag4 = new MypageActivity();
         setFrag(0); //첫 프래그먼으 화면을 무엇으로 지정해줄 것인지 선택
     }
