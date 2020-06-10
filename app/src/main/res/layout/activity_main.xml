@@ -75,19 +75,19 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/Btn_addLB"
+            android:id="@+id/btn_addLB"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="77dp"
             android:text="로그북 추가하기"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/Btn_ShowLB"
-            app:layout_constraintStart_toStartOf="@+id/Btn_ShowLB"
-            app:layout_constraintTop_toBottomOf="@+id/Btn_ShowLB" />
+            app:layout_constraintEnd_toEndOf="@+id/btn_ShowLB"
+            app:layout_constraintStart_toStartOf="@+id/btn_ShowLB"
+            app:layout_constraintTop_toBottomOf="@+id/btn_ShowLB" />
 
         <Button
-            android:id="@+id/Btn_ShowLB"
+            android:id="@+id/btn_ShowLB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="125dp"

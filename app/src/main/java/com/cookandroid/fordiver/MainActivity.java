@@ -25,6 +25,30 @@ public class MainActivity extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_main, container, false);
 
+        //버튼 정의
+        Button btn_addLB = view.findViewById(R.id.btn_addLB);
+        Button btn_ShowLB = view.findViewById(R.id.btn_ShowLB);
+
+        //추가하기 버튼을 눌렀을 때
+        btn_addLB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //액티비티 전환 Intent 정의
+                Intent intent = new Intent(getActivity(), Logbook5Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //열람하기 버튼을 눌렀을 때5
+        btn_ShowLB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //액티비티 전환 Intent 정의
+                Intent intent = new Intent(getActivity(), Logbook2Activity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
