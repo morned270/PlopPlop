@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizActivity3"
+    tools:context=".Quiz3Activity"
     android:background="@color/colorSand">
 
     <android.support.constraint.ConstraintLayout
