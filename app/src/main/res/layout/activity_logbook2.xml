@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:textSize="40dp"
         android:text="내 로그북"
+
+        android:fontFamily="@font/binggrae"
         android:layout_marginBottom="40dp"/>
 
 
