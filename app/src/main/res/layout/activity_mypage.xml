@@ -32,9 +32,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="96dp"
         android:background="@drawable/border"
         android:orientation="vertical"
         android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
@@ -77,11 +79,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
+                android:textColor="#ffffff"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:textColor="#ffffff"/>
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         </LinearLayout>
 
@@ -109,11 +111,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
+                android:textColor="#ffffff"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:textColor="#ffffff"/>
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
         </LinearLayout>
@@ -142,8 +144,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="5"
-                android:textSize="20sp"
-                android:textColor="#ffffff"/>
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -175,54 +177,14 @@
                 android:layout_height="wrap_content"
                 android:ems="3"
                 android:inputType="textPassword"
-                android:textSize="20sp"
-                android:textColor="#ffffff"/>
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
 
 
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <ImageButton
-            android:id="@+id/Btn_M_LB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab1" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab2" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_Q"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab3" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_MP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab4" />
-
-    </LinearLayout>
 
 
     <!--
