@@ -7,4 +7,21 @@
         <item>PADI MSD(마스터)</item>
         <item>기타 자격증(SSI, NAUI등)</item>
     </string-array>
+
+    <string-array name="diveloca">
+        <item>해안</item>
+        <item>바다</item>
+        <item>Liveaboard</item>
+        <item>민물</item>
+    </string-array>
+
+    <string-array name="divept">
+        <item>산호초</item>
+        <item>난파선</item>
+        <item>동굴</item>
+        <item>밤/일몰</item>
+        <item>딥다이빙</item>
+        <item>아이스다이빙</item>
+        <item>기타</item>
+    </string-array>
 </resources>
