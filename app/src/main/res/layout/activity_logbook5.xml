@@ -43,7 +43,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="283dp"
+        android:layout_height="320dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
@@ -66,113 +66,61 @@
 
                     //Diving Position Type
 
-                    <TextView
-                        android:id="@+id/DivingType_1"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="다이빙 위치" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:text="다이빙 위치" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <Spinner
+                            android:id="@+id/LB_SP_1"
+                            android:entries="@array/diveloca"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="선택"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <CheckBox
-                            android:id="@+id/check_PsT_1"
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:checked="false"
-                            android:text="해안"
-                            android:textSize="10dp" />
+                            android:layout_gravity="left"
+                            android:text="다이빙 포인트" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
 
-                        <CheckBox
-                            android:id="@+id/check_PsT_2"
-                            android:layout_width="wrap_content"
+                        <Spinner
+                            android:id="@+id/LB_SP_2"
+                            android:entries="@array/divept"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="바다"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PsT_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Liveaboard"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PsT_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="민물"
-                            android:textSize="10dp" />
+                            android:layout_gravity="right"
+                            android:text="선택"
+                            android:layout_weight="1" />
                     </LinearLayout>
 
                     //Diving Point Type
 
-                    <TextView
-                        android:id="@+id/DivingType_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="다이빙 포인트" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <CheckBox
-                            android:id="@+id/check_PiT_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:checked="false"
-                            android:text="난파선"
-                            android:textSize="8dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PiT_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="산호초"
-                            android:textSize="8dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PiT_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="동굴"
-                            android:textSize="8dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PiT_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="밤/일몰"
-                            android:textSize="8dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PiT_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Deep"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:id="@+id/check_PiT_6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Ice"
-                            android:textSize="10dp" />
-                    </LinearLayout>
                 </LinearLayout>
 
                 //수면부분
@@ -261,6 +209,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:baselineAligned="false"
                         android:orientation="horizontal">
 
                         <TextView
@@ -506,32 +455,37 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="메모" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="메모" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="*관찰한 수중생물, 느낀 점, etc"
-                    android:textSize="10dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="*관찰한 수중생물, 느낀 점, etc"
+                        android:textSize="10dp" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
                 </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <ImageView
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                     android:layout_height="match_parent"
-                    />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dive_master"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
@@ -544,12 +498,6 @@
         android:text="사진 첨부하기" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:text="다이빙 마스터 확인" />
-
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등록"

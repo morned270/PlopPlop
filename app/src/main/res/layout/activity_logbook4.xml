@@ -102,24 +102,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="메모" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="사진 첨부하기" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="다이빙 마스터 확인" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
