@@ -1,15 +1,14 @@
 package com.cookandroid.fordiver;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Quiz3Activity extends AppCompatActivity {
-
+public class Quiz3_2Activity extends AppCompatActivity {
     int quiz_num=0;
     int correct_count=0;
     int wrong_count=0;
@@ -18,28 +17,29 @@ public class Quiz3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz3);
-        final Intent intent2quiz4 = new Intent(Quiz3Activity.this, Quiz2Activity.class);
+        setContentView(R.layout.activity_quiz3_2);
 
-        TextView getcourse = (TextView)findViewById(R.id.ow_quiz_course); //퀴즈 난이도 쓸 textview 선언
+        final Intent intent2quiz4 = new Intent(Quiz3_2Activity.this, Quiz2Activity.class);
 
-        final TextView quiz_text = (TextView)findViewById(R.id.ow_quiz_text);    //문제와 문제의 답 버튼들 선언
-        final Button btn_ans_1 = (Button)findViewById(R.id.btn_ow_ans_1);
-        final Button btn_ans_2 = (Button)findViewById(R.id.btn_ow_ans_2);
-        final Button btn_ans_3 = (Button)findViewById(R.id.btn_ow_ans_3);
-        final Button btn_ans_4 = (Button)findViewById(R.id.btn_ow_ans_4);
+        TextView getcourse = (TextView)findViewById(R.id.aow_quiz_course); //퀴즈 난이도 쓸 textview 선언
 
-        Intent intent = getIntent(); /*Quiz2 화면으로부터 데이터 전달받기위함*/
-        String course = intent.getExtras().getString("course"); /*선택한 퀴즈 단계 불러오기*/
+        final TextView quiz_text = (TextView)findViewById(R.id.aow_quiz_text);    //문제와 문제의 답 버튼들 선언
+        final Button btn_ans_1 = (Button)findViewById(R.id.btn_aow_ans_1);
+        final Button btn_ans_2 = (Button)findViewById(R.id.btn_aow_ans_2);
+        final Button btn_ans_3 = (Button)findViewById(R.id.btn_aow_ans_3);
+        final Button btn_ans_4 = (Button)findViewById(R.id.btn_aow_ans_4);
+
+        Intent intent2 = getIntent(); /*Quiz2 화면으로부터 데이터 전달받기위함*/
+        String course = intent2.getExtras().getString("course"); /*선택한 퀴즈 단계 불러오기*/
         getcourse.setText(course);
 
 
-    final String[] arr_text = getResources().getStringArray(R.array.ow_quiz_text); /*quiz_aow 불러오기*/
-    final String[] arr_ans1 = getResources().getStringArray(R.array.ow_ans_1);
-    final String[] arr_ans2 = getResources().getStringArray(R.array.ow_ans_2);
-    final String[] arr_ans3 = getResources().getStringArray(R.array.ow_ans_3);
-    final String[] arr_ans4 = getResources().getStringArray(R.array.ow_ans_4);
-    final int[] arr_anslist = getResources().getIntArray(R.array.ow_anslist);
+        final String[] arr_text = getResources().getStringArray(R.array.aow_quiz_text); /*quiz_aow 불러오기*/
+        final String[] arr_ans1 = getResources().getStringArray(R.array.aow_ans_1);
+        final String[] arr_ans2 = getResources().getStringArray(R.array.aow_ans_2);
+        final String[] arr_ans3 = getResources().getStringArray(R.array.aow_ans_3);
+        final String[] arr_ans4 = getResources().getStringArray(R.array.aow_ans_4);
+        final int[] arr_anslist = getResources().getIntArray(R.array.aow_anslist);
 
 
         quiz_text.setText(arr_text[0]); //첫번째 문제 띄우기
@@ -71,7 +71,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 else{
                     Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
                     startActivity(intent2quiz4);
-                //결과 화면으로 넘어가기
+                    //결과 화면으로 넘어가기
                 }
             }
         });

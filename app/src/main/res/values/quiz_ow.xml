@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="ow_anslist">
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="ow_quiz_text">
+        <item>1. 가라앉지도 뜨지도 않는 물체를 무엇이라 부르는가? </item>
+        <item>2번문제</item>
+        <item>3. 30m 수심에서의 주변 압력은 수면에서의 주변압력의 몇배인가?</item>
+        <item>4. 바닷물에서 중성부력인 물체를 그대로 민물에 옮겨 놓았다면 민물에서의 부력은? </item>
+        <item>5번문제</item>
+        <item>6번문제</item>
+        <item>7번문제</item>
+        <item>8번문제</item>
+        <item>9번문제</item>
+        <item>10번문제</item>
+    </string-array>
+
+    <string-array name="ow_ans_1">
+        <item>A. 양성부력</item>
+        <item>A. 오답</item>
+        <item>A. 2배</item>
+        <item>A. 음성부력</item>
+        <item>A. 오답</item>
+        <item>A. 오답</item>
+        <item>A. 오답</item>
+        <item>A. 오답</item>
+        <item>A. 9번답</item>
+        <item>A. 10번답</item>
+    </string-array>
+
+    <string-array name="ow_ans_2">
+        <item>B. 중성부력</item>
+        <item>B. 오답</item>
+        <item>B. 3배</item>
+        <item>B. 양성부력</item>
+        <item>B. 오답</item>
+        <item>B. 오답</item>
+        <item>B. 오답</item>
+        <item>B. 8번답</item>
+        <item>B. 오답</item>
+        <item>B. 오답</item>
+    </string-array>
+
+    <string-array name="ow_ans_3">
+        <item>C. 음성부력</item>
+        <item>C. 2번답</item>
+        <item>C. 4배</item>
+        <item>C. 중성부력</item>
+        <item>C. 5번답</item>
+        <item>C. 오답</item>
+        <item>C. 7번답</item>
+        <item>C. 오답</item>
+        <item>C. 오답</item>
+        <item>C. 오답</item>
+    </string-array>
+
+    <string-array name="ow_ans_4">
+        <item>D. 부분부력</item>
+        <item>D. 오답</item>
+        <item>D. 5배</item>
+        <item>D. 변화없다.</item>
+        <item>D. 오답</item>
+        <item>D. 6번답</item>
+        <item>D. 오답</item>
+        <item>D. 오답</item>
+        <item>D. 오답</item>
+        <item>D. 오답</item>
+    </string-array>
+</resources>
