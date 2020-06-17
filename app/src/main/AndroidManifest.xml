@@ -29,7 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Quiz2Activity" />
         <activity android:name=".Quiz3Activity" />
+        <activity android:name=".Quiz3_2Activity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".Quiz4Activity"></activity>
     </application>
