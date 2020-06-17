@@ -45,7 +45,7 @@ public class SignupActivity extends AppCompatActivity {
         et_pass = findViewById(R.id.et_pass);
         et_name = findViewById(R.id.et_name);
 
-// 회원가입 버튼 클릭 시 수행
+        // 회원가입 버튼 클릭 시 수행
         btn_register = findViewById(R.id.btn_register);
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +55,9 @@ public class SignupActivity extends AppCompatActivity {
                 String userPass = et_pass.getText().toString();
                 String userName = et_name.getText().toString();
                 String userCourse = spinner.getSelectedItem().toString();
+                String userSpeciality = "해당 없음";
+                int userLog = 0;
+                int userGoal = 0;
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -101,7 +104,7 @@ public class SignupActivity extends AppCompatActivity {
                 };
 
                 //서버로 Volley를 이용해서 요청을 함.
-                RegisterRequest registerRequest = new RegisterRequest(userID, userPass, userName, userCourse, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(userID, userPass, userName, userCourse, userSpeciality, userLog, userGoal, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(SignupActivity.this);
                 queue.add(registerRequest);
             }
