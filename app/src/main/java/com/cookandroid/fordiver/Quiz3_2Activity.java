@@ -19,7 +19,7 @@ public class Quiz3_2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz3_2);
 
-        final Intent intent2quiz4 = new Intent(Quiz3_2Activity.this, Quiz2Activity.class);
+        final Intent intent2quiz4 = new Intent(Quiz3_2Activity.this, Quiz4Activity.class);
 
         TextView getcourse = (TextView)findViewById(R.id.aow_quiz_course); //퀴즈 난이도 쓸 textview 선언
 
@@ -70,6 +70,8 @@ public class Quiz3_2Activity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    intent2quiz4.putExtra("correct",correct_count); /*송신*/
+                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
                     //결과 화면으로 넘어가기
                 }
@@ -98,6 +100,8 @@ public class Quiz3_2Activity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    intent2quiz4.putExtra("correct",correct_count); /*송신*/
+                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
                     //결과 화면으로 넘어가기
                 }
@@ -126,6 +130,8 @@ public class Quiz3_2Activity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    intent2quiz4.putExtra("correct",correct_count); /*송신*/
+                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
                     //결과 화면으로 넘어가기
                 }
@@ -154,6 +160,8 @@ public class Quiz3_2Activity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    intent2quiz4.putExtra("correct",correct_count); /*송신*/
+                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
                     //결과 화면으로 넘어가기
                 }
