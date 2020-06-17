@@ -9,7 +9,7 @@
     android:background="@color/colorSand">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/ow_textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -33,7 +33,7 @@
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/ow_textView5"
         android:scaleType="fitXY"/>
 
     <android.support.constraint.ConstraintLayout

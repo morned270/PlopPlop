@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer-array name="anslist">
+    <integer-array name="ow_anslist">
         <item>1</item>
         <item>3</item>
         <item>2</item>
@@ -13,7 +13,7 @@
         <item>1</item>
     </integer-array>
 
-    <string-array name="quiz_text">
+    <string-array name="ow_quiz_text">
         <item>1번문제</item>
         <item>2번문제</item>
         <item>3번문제</item>
@@ -26,7 +26,7 @@
         <item>10번문제</item>
     </string-array>
 
-    <string-array name="ans_1">
+    <string-array name="ow_ans_1">
         <item>1번답</item>
         <item>오답</item>
         <item>오답</item>
@@ -39,7 +39,7 @@
         <item>10번답</item>
     </string-array>
 
-    <string-array name="ans_2">
+    <string-array name="ow_ans_2">
         <item>오답</item>
         <item>오답</item>
         <item>3번답</item>
@@ -52,7 +52,7 @@
         <item>오답</item>
     </string-array>
 
-    <string-array name="ans_3">
+    <string-array name="ow_ans_3">
         <item>오답</item>
         <item>2번답</item>
         <item>오답</item>
@@ -65,7 +65,7 @@
         <item>오답</item>
     </string-array>
 
-    <string-array name="ans_4">
+    <string-array name="ow_ans_4">
         <item>오답</item>
         <item>오답</item>
         <item>오답</item>

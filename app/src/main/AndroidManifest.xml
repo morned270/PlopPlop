@@ -19,7 +19,7 @@
         <activity android:name=".Logbook3Activity" />
         <activity android:name=".Logbook4Activity" />
         <activity android:name=".Logbook5Activity" />
-        <activity android:name=".InitialActivity"></activity>
+        <activity android:name=".InitialActivity" />
         <activity android:name=".Quiz3Activity" />
         <activity android:name=".MenuActivity">
             <intent-filter>
@@ -28,7 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Quiz2Activity"></activity>
+        <activity android:name=".Quiz2Activity" />
+        <activity android:name=".Quiz3_2Activity"></activity>
     </application>
 
 </manifest>

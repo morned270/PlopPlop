@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/ow_imageView4"
         android:layout_width="227dp"
         android:layout_height="234dp"
         android:layout_marginTop="40dp"
@@ -42,8 +42,8 @@
         android:text="시작하기"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="@+id/ow_imageView4"
+        app:layout_constraintStart_toStartOf="@+id/ow_imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/ow_imageView4" />
 
 </android.support.constraint.ConstraintLayout>
