@@ -84,12 +84,12 @@
 
                         <Spinner
                             android:id="@+id/LB_SP_1"
-                            android:entries="@array/diveloca"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="선택"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:entries="@array/diveloca"
+                            android:text="선택" />
 
 
                     </LinearLayout>
@@ -97,13 +97,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
                             android:text="다이빙 포인트" />
+
                         <View
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -111,12 +113,12 @@
 
                         <Spinner
                             android:id="@+id/LB_SP_2"
-                            android:entries="@array/divept"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="선택"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:entries="@array/divept"
+                            android:text="선택" />
                     </LinearLayout>
 
                     //Diving Point Type
@@ -136,7 +138,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -153,7 +156,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="날씨/수면온도" />
+                            android:text="수면온도(˚C)" />
 
                         <View
                             android:layout_width="0dp"
@@ -179,7 +182,8 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="time" />
+                            android:inputType="time"
+                            android:padding="10dp" />
 
                         <View
                             android:layout_width="0dp"
@@ -190,7 +194,8 @@
                             android:id="@+id/LB_IP_2"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:padding="10dp" />
 
                         <View
                             android:layout_width="0dp"
@@ -202,7 +207,8 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="time" />
+                            android:inputType="time"
+                            android:padding="10dp" />
 
                     </LinearLayout>
 
@@ -210,7 +216,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:baselineAligned="false"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -242,7 +249,8 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="time" />
+                            android:inputType="time"
+                            android:padding="10dp" />
 
                         <View
                             android:layout_width="0dp"
@@ -253,7 +261,8 @@
                             android:id="@+id/LB_IP_5"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:padding="10dp" />
 
 
                     </LinearLayout>
@@ -294,13 +303,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="시야      " />
+                            android:text="시야(m)" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="      파도" />
+                            android:text="    파도" />
 
                         <View
                             android:layout_width="0dp"
@@ -320,6 +329,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:padding="10dp"
                         android:orientation="horizontal">
 
                         <EditText
@@ -362,13 +372,14 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:padding="10dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="최대수심" />
+                            android:text="최대수심(m)" />
 
                         <View
                             android:layout_width="0dp"
@@ -379,7 +390,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="평균수심" />
+                            android:text="평균수심(m)" />
 
                     </LinearLayout>
                     //최대수심, 평균수심 text 끝
@@ -387,6 +398,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:padding="10dp"
                         android:orientation="horizontal">
 
                         <EditText
@@ -453,7 +465,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -469,6 +482,7 @@
                         android:textSize="10dp" />
 
                     <EditText
+                        android:id="@+id/LB_IP_14"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
