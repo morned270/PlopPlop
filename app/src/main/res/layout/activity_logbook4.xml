@@ -570,7 +570,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <!--이미지 표시-->
+                    <!--이미지표시-->
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
