@@ -54,6 +54,8 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             if(success){    // 로그인에 성공한 경우
+                                String userID = jsonObject.getString("userID");
+                                int userLog = jsonObject.getInt("userLog");
                                 String userName = jsonObject.getString("userName");
                                 String userCourse = jsonObject.getString("userCourse");
 
@@ -61,6 +63,9 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                                 intent.putExtra("userName", userName);
                                 intent.putExtra("userCourse", userCourse);
+                                intent.putExtra("userID", userID);
+                                intent.putExtra("userLog", userLog);
+
                                 startActivity(intent);
                             }
                             else{   // 로그인에 실패한 경우

@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Logbook5Activity"
-    android:orientation="vertical"
-    android:layout_margin="30dp">
+    android:orientation="vertical">
+    //android:layout_margin="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,11 +16,11 @@
         android:layout_marginBottom="30dp">
 
         <TextView
-            android:id="@+id/Text_LogNumber"
+            android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="#2"/>
+            android:text="숫자"
+            android:textSize="30dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,16 +30,16 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="#2  2020.05.23" />
+        android:text="오늘 날짜 yyyy-MM-dd" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/et_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="필리핀, 말라파스쿠아" />
+        android:hint="필리핀, 말라파스쿠아" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                             android:layout_weight="1" />
 
                         <Spinner
-                            android:id="@+id/LB_SP_1"
+                            android:id="@+id/sp_locationtype"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
@@ -97,22 +97,20 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:padding="5dp">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
                             android:text="다이빙 포인트" />
-
                         <View
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
 
                         <Spinner
-                            android:id="@+id/LB_SP_2"
+                            android:id="@+id/sp_point"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
@@ -138,8 +136,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -156,7 +153,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="수면온도(˚C)" />
+                            android:text="날씨/수면온도" />
 
                         <View
                             android:layout_width="0dp"
@@ -178,12 +175,11 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_1"
+                            android:id="@+id/et_entertime"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="time"
-                            android:padding="10dp" />
+                            android:inputType="time" />
 
                         <View
                             android:layout_width="0dp"
@@ -191,11 +187,10 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_2"
+                            android:id="@+id/et_temperature"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:padding="10dp" />
+                            android:layout_gravity="center" />
 
                         <View
                             android:layout_width="0dp"
@@ -203,12 +198,11 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_3"
+                            android:id="@+id/et_exittime"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="time"
-                            android:padding="10dp" />
+                            android:inputType="time" />
 
                     </LinearLayout>
 
@@ -216,8 +210,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:baselineAligned="false"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -245,12 +238,11 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_4"
+                            android:id="@+id/et_resttime"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="time"
-                            android:padding="10dp" />
+                            android:inputType="time" />
 
                         <View
                             android:layout_width="0dp"
@@ -258,11 +250,10 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_5"
+                            android:id="@+id/et_weight"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:padding="10dp" />
+                            android:layout_gravity="center" />
 
 
                     </LinearLayout>
@@ -303,13 +294,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="시야(m)" />
+                            android:text="시야      " />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="    파도" />
+                            android:text="      파도" />
 
                         <View
                             android:layout_width="0dp"
@@ -329,11 +320,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="10dp"
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_6"
+                            android:id="@+id/et_enterpressure"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
@@ -344,13 +334,13 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_7"
+                            android:id="@+id/et_view"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
 
                         <EditText
-                            android:id="@+id/LB_IP_8"
+                            android:id="@+id/et_wave"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -361,7 +351,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_9"
+                            android:id="@+id/et_exitpressure"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
@@ -372,14 +362,13 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="10dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="최대수심(m)" />
+                            android:text="최대수심" />
 
                         <View
                             android:layout_width="0dp"
@@ -390,7 +379,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="평균수심(m)" />
+                            android:text="평균수심" />
 
                     </LinearLayout>
                     //최대수심, 평균수심 text 끝
@@ -398,11 +387,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="10dp"
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_10"
+                            android:id="@+id/et_maxdepth"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
@@ -413,7 +401,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_11"
+                            android:id="@+id/et_avedepth"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
@@ -433,7 +421,7 @@
                             android:text="안전정지준수" />
 
                         <CheckBox
-                            android:id="@+id/LB_IP_12"
+                            android:id="@+id/cb_stop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -451,7 +439,7 @@
                             android:text="상승속도준수" />
 
                         <CheckBox
-                            android:id="@+id/LB_IP_13"
+                            android:id="@+id/cb_speed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -465,8 +453,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -482,7 +469,7 @@
                         android:textSize="10dp" />
 
                     <EditText
-                        android:id="@+id/LB_IP_14"
+                        android:id="@+id/et_memo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
@@ -493,12 +480,12 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btn_addSign"
+                        android:id="@+id/imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:src="@drawable/dive_master"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/dive_master" />
+                        android:scaleType="fitCenter"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
@@ -506,13 +493,13 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_addPHO"
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:text="사진 첨부하기" />
 
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
