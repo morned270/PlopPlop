@@ -70,7 +70,8 @@
             <EditText
                 android:id="@+id/et_id"
                 android:layout_width="226dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:gravity="right"/>
         </LinearLayout>
 
         <LinearLayout
@@ -95,7 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:gravity="right"/>
 
         </LinearLayout>
 
@@ -123,7 +125,6 @@
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:text="회원가입"
-
             android:textSize="50px" />
 
         <Button

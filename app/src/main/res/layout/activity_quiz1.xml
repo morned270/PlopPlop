@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/dive" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_start_quiz"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="67dp"
