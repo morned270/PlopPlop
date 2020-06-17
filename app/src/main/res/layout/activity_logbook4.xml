@@ -108,7 +108,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    //Diving Position Type
+                    <!--Diving Position Type-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -163,11 +163,11 @@
                             android:layout_weight="1" />
                     </LinearLayout>
 
-                    //Diving Point Type
+                    <!--Diving Point Type-->
 
                 </LinearLayout>
 
-                //수면부분
+                <!--수면부분-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                     android:background="@color/colorSand"
                     android:orientation="vertical">
 
-                    //입수 출수시간 text
+                    <!--입수 출수시간 text-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -212,7 +212,7 @@
                             android:text="출수시간" />
 
                     </LinearLayout>
-                    //입수 출수시간 text 끝
+                    <!--입수 출수시간 text 끝-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -282,7 +282,7 @@
                             android:text="웨이트 무게" />
 
                     </LinearLayout>
-                    //입수 출수시간 text 끝
+                    <!--입수 출수시간 text 끝-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -322,9 +322,9 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/wave" />
                 </LinearLayout>
-                //수면부분 끝
+                <!--수면부분 끝-->
 
-                //수중부분
+                <!--수중부분-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -373,8 +373,8 @@
                             android:text="출수공기압" />
 
                     </LinearLayout>
-                    //text 끝
-                    //input 시작
+                    <!--text 끝-->
+                    <!--input 시작-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -432,7 +432,7 @@
                             android:text="Bar" />
 
                     </LinearLayout>
-                    //input 끝
+                    <!--input 끝-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -458,7 +458,7 @@
                             android:text="평균수심" />
 
                     </LinearLayout>
-                    //최대수심, 평균수심 text 끝
+                    <!--최대수심, 평균수심 text 끝-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -494,7 +494,7 @@
                             android:text="M" />
 
                     </LinearLayout>
-                    //최대수심, 평균수심 edittext 끝
+                    <!--최대수심, 평균수심 edittext 끝-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -536,7 +536,7 @@
                             android:textSize="10dp" />
 
                     </LinearLayout>
-                    //최대수심, 평균수심 text 끝
+                    <!--최대수심, 평균수심 text 끝-->
 
                 </LinearLayout>
 
@@ -570,7 +570,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    //이미지 표시
+                    <!--이미지 표시-->
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
