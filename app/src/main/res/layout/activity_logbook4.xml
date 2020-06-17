@@ -87,10 +87,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="172dp"
-        android:orientation="vertical"
+        android:layout_height="300dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -237,10 +237,11 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
+
                         <TextView
-                            android:text="ºC"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="ºC" />
 
                         <View
                             android:layout_width="0dp"
@@ -306,10 +307,11 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
+
                         <TextView
-                            android:text="lbs"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="lbs" />
 
 
                     </LinearLayout>
@@ -385,10 +387,11 @@
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
+
                         <TextView
-                            android:text="Bar"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="Bar" />
 
                         <View
                             android:layout_width="0dp"
@@ -400,10 +403,12 @@
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
+
                         <TextView
-                            android:text="M  "
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="M  " />
+
                         <TextView
                             android:id="@+id/LB_OP_8"
                             android:layout_width="50dp"
@@ -420,10 +425,11 @@
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
+
                         <TextView
-                            android:text="Bar"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="Bar" />
 
                     </LinearLayout>
                     //input 끝
@@ -465,10 +471,11 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
+
                         <TextView
-                            android:text="M"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="M" />
 
                         <View
                             android:layout_width="0dp"
@@ -480,10 +487,11 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
+
                         <TextView
-                            android:text="M"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="M" />
 
                     </LinearLayout>
                     //최대수심, 평균수심 edittext 끝
@@ -562,44 +570,10 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                   //이미지 표시
+                    //이미지 표시
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageButton
-            android:id="@+id/Btn_M_LB"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab1" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_C"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab2" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_Q"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab3" />
-
-        <ImageButton
-            android:id="@+id/Btn_M_MP"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_tab4" />
 
     </LinearLayout>
 

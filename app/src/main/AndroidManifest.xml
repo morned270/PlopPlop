@@ -3,6 +3,9 @@
     package="com.cookandroid.fordiver">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />    //카메라 권한
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    //외부저장소에 쓰기 권한
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />     //외부저장소에 읽기 권한
 
     <!-- 인터넷 권한 설정 -->
     <application
