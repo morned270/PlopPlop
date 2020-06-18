@@ -6,6 +6,14 @@ import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Logbook4Activity extends AppCompatActivity {
 
@@ -76,8 +84,12 @@ public class Logbook4Activity extends AppCompatActivity {
         tv_wave.setText(logWave);
         tv_maxdepth.setText(String.valueOf(logMaxDepth));
         tv_avedepth.setText(String.valueOf(logAveDepth));
-        cb_stop.setText(String.valueOf(logStopFollow));     //검사
-        cb_speed.setText(String.valueOf(logSpeedFollow));
+        if (logStopFollow == 1) {
+            cb_stop.setChecked(true);
+        }
+        if (logSpeedFollow == 1) {
+            cb_speed.setChecked(true);
+        }
         tv_memo.setText(logMemo);
 
     }
