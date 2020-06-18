@@ -2,6 +2,5 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path
         name="my_images"
-        path="Android/data/com.example.morned270.cameratest/files/Pictures"/>
-
+        path="Android/data/com.cookandroid.fordiver/files/Pictures"/>
 </paths>
