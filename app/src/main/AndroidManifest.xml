@@ -44,6 +44,11 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="x653pgrtyk" />
+
     </application>
 
 </manifest>

@@ -73,10 +73,16 @@
         android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="구글맵 들어갈 자리" />
+        <fragment xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map"
+            android:name="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navermap_latitude="35.1798159"
+            app:navermap_longitude="129.0750222"
+            app:navermap_mapType="Basic"
+            app:navermap_zoom="8" />
+
     </LinearLayout>
 
 
