@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorSand">
 
     <TextView
         android:id="@+id/textView5"
@@ -25,6 +26,7 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="fill_parent"
         android:layout_height="145dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,11 +41,23 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="59dp"
             android:layout_marginBottom="59dp"
-            android:text="누적"
-            android:textSize="20dp"
+            android:text="누적 : "
+            android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_log"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="110dp"
+            android:src="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -51,52 +65,73 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="59dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="125dp"
             android:layout_marginBottom="59dp"
-            android:text="00회"
-            android:textSize="20dp"
+            android:text="00"
+            android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/tv_log"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
     </android.support.constraint.ConstraintLayout>
 
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="fill_parent"
-        android:layout_height="254dp"
+        android:layout_height="361dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:layout_constraintVertical_bias="0.0">
-
-        <Button
-            android:id="@+id/btn_addLB"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="77dp"
-            android:text="로그북 추가하기"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btn_ShowLB"
-            app:layout_constraintStart_toStartOf="@+id/btn_ShowLB"
-            app:layout_constraintTop_toBottomOf="@+id/btn_ShowLB" />
 
         <Button
             android:id="@+id/btn_ShowLB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="125dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="125dp"
-            android:text="내 로그북 열람하기"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorGreen"
+            android:text="내 로그북\n열람하기"
+            android:textSize="33dp"
+            android:padding="50px"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_addLB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="77dp"
+            android:background="@color/colorGray"
+            android:padding="50px"
+            android:text="로그북\n추가하기"
+            android:textColor="@color/colorWhite"
+            android:textSize="33dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_ShowLB"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_ShowLB"
+            app:layout_constraintTop_toBottomOf="@+id/btn_ShowLB"
+            app:layout_constraintVertical_bias="0.047" />
 
     </android.support.constraint.ConstraintLayout>
 
