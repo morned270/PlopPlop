@@ -33,6 +33,17 @@
         <activity android:name=".Quiz3_2Activity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".Quiz4Activity"></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cookandroid.fordiver"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
 
 </manifest>
