@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer-array name="aow_anslist">
+        <item>3</item>
         <item>1</item>
         <item>3</item>
-        <item>2</item>
         <item>4</item>
         <item>3</item>
-        <item>4</item>
-        <item>3</item>
+        <item>1</item>
         <item>2</item>
         <item>1</item>
-        <item>1</item>
+        <item>4</item>
+        <item>4</item>
     </integer-array>
 
     <string-array name="aow_quiz_text">
-        <item>1번문제</item>
-        <item>2번문제</item>
-        <item>3번문제</item>
-        <item>4번문제</item>
-        <item>5번문제</item>
-        <item>6번문제</item>
-        <item>7번문제</item>
-        <item>8번문제</item>
-        <item>9번문제</item>
-        <item>10번문제</item>
+        <item>1. 민물 호수에서의 다이빙을 할 때 나는 68kg/150lb의 체중이며, 모자, 부츠, 장갑이 달린, 7mm 슈트를 입을 것이다. 기본 웨이팅 가이드라인을 사용하여 내 웨이트 체크전에 나는 얼마의 웨이트로 시작해야하는가?</item>
+        <item>2. 수면에서 부력(웨이트) 체크를 시행할 때, 내가 해야할 것이 아닌것은?</item>
+        <item>3. 오프 서킷 스쿠버 다이빙에서, 내가 들이마실 때 내 가슴은 ___되고, 부력은 ___한다.이는 내가 리브리더를 사용할 때는 일어나지 않는데, 왜냐하면 ___때문이다.</item>
+        <item>4. 대부분의 지역에서 _____ 드리프트 다이빙이 제일 인기있는 테크닉이 되어가고 있다.</item>
+        <item>5. 수중에서 빛 손실을 일으키는 유일한 원인은 부유입자의 방해 떄문이다.</item>
+        <item>6. 나는 함수를 향한 채 보트에 서있다. ___는 내 오른쪽에 그리고 ___는 내 왼쪽에 있다.</item>
+        <item>7. 딥다이빙의 기준 깊이는?</item>
+        <item>8. 수중항법에서 나침반을 이용할 때, 나의 진행방향은 인덱스마크와 무엇을 일치시켜야 하는가?</item>
+        <item>9. 다이빙 전에, 내 부력을 항상 체크해야 할 때가 아닌 것은?</item>
+        <item>10. 다이빙 중, 중성부력을 유지하기 위해 내가 해야할 것이 아닌것은?</item>
     </string-array>
 
     <string-array name="aow_ans_1">
-        <item>1번답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>9번답</item>
-        <item>10번답</item>
+        <item>A. 9.8kg/20lb 이상</item>
+        <item>A. 내 레귤레이터로 부터 호흡하면서 BCD에 공기를 가득 넣는다.</item>
+        <item>A. 확장, 감소, 스크러버</item>
+        <item>A. 수면 플로트를 사용하는</item>
+        <item>A. 맞다.</item>
+        <item>A. 우현; 좌현</item>
+        <item>A. 오픈워터 제한수심(18M) 이하의 다이빙</item>
+        <item>A. 러버라인</item>
+        <item>A. 내가 소금물 대신 민물에서 다이빙을 할 때, 또는 반대의 경우</item>
+        <item>A. 핀과 호흡을 사용하여 수심을 변경한다.</item>
     </string-array>
 
     <string-array name="aow_ans_2">
-        <item>오답</item>
-        <item>오답</item>
-        <item>3번답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>8번답</item>
-        <item>오답</item>
-        <item>오답</item>
+        <item>B. 8.3-9.8kg/18-20lb</item>
+        <item>B. 안정을 취하고, 보통의 호흡을 들여 마시고 멈춘다.</item>
+        <item>B. 수축, 증가, 스크러버</item>
+        <item>B. 수면 플로트를 사용하지 않는</item>
+        <item>   </item>
+        <item>B. 우현; 선미</item>
+        <item>B. 오픈워터의 제한수심(18M) 이상 수심의 다이빙(18M~30M)</item>
+        <item>B. 남쪽 지침</item>
+        <item>B. 새로운 장비를 사용할 때</item>
+        <item>B. 내 BCD의 모든 다양한 배기 밸브를 사용한다.</item>
     </string-array>
 
     <string-array name="aow_ans_3">
-        <item>오답</item>
-        <item>2번답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>5번답</item>
-        <item>오답</item>
-        <item>7번답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
+        <item>C. 6-7.5kg/13-15lb</item>
+        <item>C. 눈 높이로 뜰때까지 웨이트를 더하거나 뺀다</item>
+        <item>C. 확장, 증가, 카운터렁</item>
+        <item>C. 라인과 릴을 사용하는</item>
+        <item>C. 틀리다</item>
+        <item>C. 좌현; 우현</item>
+        <item>C. 30M~40M 수심에서의 다이빙</item>
+        <item>C. 베젤</item>
+        <item>C. 한동안 다이빙을 하지 않았었을 때</item>
+        <item>C. 변화를 예상하고 작게, 자주 조절을 한다.</item>
     </string-array>
 
     <string-array name="aow_ans_4">
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>4번답</item>
-        <item>오답</item>
-        <item>6번답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
-        <item>오답</item>
+        <item>D. 6.8kg/15lb 이하</item>
+        <item>D. 내가 호흡을 내쉴 때 천천히 가라앉는다.</item>
+        <item>D. 수축, 감소, 카운터렁</item>
+        <item>D. DSMB를 사용하는</item>
+        <item>   </item>
+        <item>D. 좌현; 선미</item>
+        <item>D. 40M이상의 깊은 수심의 다이빙</item>
+        <item>D. 북쪽 지침</item>
+        <item>D. 내가 다이빙 장소까지 긴 비행을 했을 경우에</item>
+        <item>D. 길고, 깊은 호흡을 하고 3초동안 숨을 참는다.</item>
     </string-array>
 </resources>

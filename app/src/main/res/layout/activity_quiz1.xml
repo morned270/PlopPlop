@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Quiz1Activity">
+    tools:context=".Quiz1Activity"
+    android:background="@color/colorSand">
 
     <TextView
         android:id="@+id/textView9"
@@ -24,13 +25,13 @@
 
     <ImageView
         android:id="@+id/ow_imageView4"
-        android:layout_width="227dp"
-        android:layout_height="234dp"
+        android:layout_width="306dp"
+        android:layout_height="264dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:srcCompat="@drawable/dive" />
+        app:srcCompat="@drawable/diverquiz" />
 
     <Button
         android:id="@+id/btn_start_quiz"

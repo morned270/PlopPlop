@@ -32,9 +32,8 @@
 
         <ImageView
             android:id="@+id/ow_imageView4"
-            android:layout_width="54dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="46dp"
+            android:layout_height="55dp"
             android:layout_marginTop="4dp"
             android:src="@drawable/clock"
             app:layout_constraintEnd_toStartOf="@+id/ow_quiz_time"
@@ -43,12 +42,12 @@
 
         <TextView
             android:id="@+id/ow_quiz_time"
-            android:layout_width="wrap_content"
-            android:layout_height="49dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="78dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
             android:text="1:48"
-            android:textSize="30dp"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ow_imageView4"
             app:layout_constraintTop_toTopOf="parent" />
@@ -85,7 +84,8 @@
         <TextView
             android:id="@+id/ow_quiz_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
+            app:autoSizeTextType="uniform"
             android:text="1. 수중에서 보는 물체는 지상에서 보는 물체보다 어떻게 보이는가?"
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +96,10 @@
         <Button
             android:id="@+id/btn_ow_ans_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            app:autoSizeMaxTextSize="25dp"
+            app:autoSizeMinTextSize="15dp"
+            app:autoSizeTextType="uniform"
             android:layout_marginTop="8dp"
             android:text="A. 멀고 작게"
             android:textSize="20dp"
@@ -108,7 +111,10 @@
         <Button
             android:id="@+id/btn_ow_ans_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            app:autoSizeMaxTextSize="25dp"
+            app:autoSizeMinTextSize="15dp"
+            app:autoSizeTextType="uniform"
             android:layout_marginTop="12dp"
             android:text="B. 가깝고 크게"
             android:textSize="20dp"
@@ -120,7 +126,10 @@
         <Button
             android:id="@+id/btn_ow_ans_3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            app:autoSizeMaxTextSize="25dp"
+            app:autoSizeMinTextSize="15dp"
+            app:autoSizeTextType="uniform"
             android:layout_marginTop="16dp"
             android:text="C. 가깝고 작게"
             android:textSize="20dp"
@@ -132,7 +141,10 @@
         <Button
             android:id="@+id/btn_ow_ans_4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            app:autoSizeMaxTextSize="25dp"
+            app:autoSizeMinTextSize="15dp"
+            app:autoSizeTextType="uniform"
             android:layout_marginTop="16dp"
             android:text="D. 멀고 크게"
             android:textSize="20dp"
