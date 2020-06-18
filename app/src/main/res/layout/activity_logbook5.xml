@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Logbook5Activity"
-    android:orientation="vertical"
-    android:layout_margin="30dp">
+    android:orientation="vertical">
+    //android:layout_margin="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,11 +16,11 @@
         android:layout_marginBottom="30dp">
 
         <TextView
-            android:id="@+id/Text_LogNumber"
+            android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="#2"/>
+            android:text="숫자"
+            android:textSize="30dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,16 +30,16 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="#2  2020.05.23" />
+        android:text="오늘 날짜 yyyy-MM-dd" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/et_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="필리핀, 말라파스쿠아" />
+        android:hint="필리핀, 말라파스쿠아" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,13 +83,13 @@
                             android:layout_weight="1" />
 
                         <Spinner
-                            android:id="@+id/LB_SP_1"
-                            android:entries="@array/diveloca"
+                            android:id="@+id/sp_locationtype"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="선택"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:entries="@array/diveloca"
+                            android:text="선택" />
 
 
                     </LinearLayout>
@@ -110,13 +110,13 @@
                             android:layout_weight="1" />
 
                         <Spinner
-                            android:id="@+id/LB_SP_2"
-                            android:entries="@array/divept"
+                            android:id="@+id/sp_point"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="선택"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:entries="@array/divept"
+                            android:text="선택" />
                     </LinearLayout>
 
                     //Diving Point Type
@@ -175,7 +175,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_1"
+                            android:id="@+id/et_entertime"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -187,7 +187,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_2"
+                            android:id="@+id/et_temperature"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -198,7 +198,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_3"
+                            android:id="@+id/et_exittime"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
@@ -238,7 +238,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_4"
+                            android:id="@+id/et_resttime"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -250,7 +250,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_5"
+                            android:id="@+id/et_weight"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -323,7 +323,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_6"
+                            android:id="@+id/et_enterpressure"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
@@ -334,13 +334,13 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_7"
+                            android:id="@+id/et_view"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
 
                         <EditText
-                            android:id="@+id/LB_IP_8"
+                            android:id="@+id/et_wave"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -351,7 +351,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_9"
+                            android:id="@+id/et_exitpressure"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
@@ -390,7 +390,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/LB_IP_10"
+                            android:id="@+id/et_maxdepth"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
@@ -401,7 +401,7 @@
                             android:layout_weight="1" />
 
                         <EditText
-                            android:id="@+id/LB_IP_11"
+                            android:id="@+id/et_avedepth"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
@@ -421,7 +421,7 @@
                             android:text="안전정지준수" />
 
                         <CheckBox
-                            android:id="@+id/LB_IP_12"
+                            android:id="@+id/cb_stop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -439,7 +439,7 @@
                             android:text="상승속도준수" />
 
                         <CheckBox
-                            android:id="@+id/LB_IP_13"
+                            android:id="@+id/cb_speed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -469,6 +469,7 @@
                         android:textSize="10dp" />
 
                     <EditText
+                        android:id="@+id/et_memo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
@@ -498,10 +499,11 @@
         android:text="사진 첨부하기" />
 
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="등록"
-            android:layout_gravity="right"/>
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="등록" />
 
 
 </LinearLayout>

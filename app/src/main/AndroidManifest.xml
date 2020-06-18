@@ -3,6 +3,9 @@
     package="com.cookandroid.fordiver">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!--카메라 권한-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    <!--외부저장소에 쓰기 권한-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />     <!--외부저장소에 읽기 권한-->
 
     <!-- 인터넷 권한 설정 -->
     <application
@@ -17,24 +20,23 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".Logbook3Activity" />
-        <activity android:name=".Logbook4Activity" ></activity>
-        <activity android:name=".Logbook5Activity" ></activity>
+        <activity android:name=".Logbook4Activity" />
+        <activity android:name=".Logbook5Activity" />
         <activity android:name=".InitialActivity">
-
-        </activity>
-        <activity android:name=".Quiz3Activity" />
-        <activity android:name=".MenuActivity" >
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".Quiz2Activity" />
+        <activity android:name=".Quiz3Activity" />
+        <activity android:name=".Quiz3_2Activity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".Quiz4Activity"></activity>
+
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="x653pgrtyk" />
-
-
 
     </application>
 

@@ -55,7 +55,7 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
     public void onMapReady(@NonNull NaverMap naverMap) {
         // ...
         Marker marker = new Marker();
-        marker.setPosition(new LatLng(36.763695, 127.281796));
+        marker.setPosition(new LatLng(35.1798159, 129.0750222));
         marker.setMap(naverMap);
 
     }

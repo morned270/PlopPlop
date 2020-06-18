@@ -14,7 +14,7 @@ public class RegisterRequest extends StringRequest {
     final static private String URL = "http://zex199.dothome.co.kr/Register.php";
     private Map<String, String> map;
 
-    public RegisterRequest(String userID, String userPassword, String userName, String userCourse, Response.Listener<String> listener) {
+    public RegisterRequest(String userID, String userPassword, String userName, String userCourse, String userSpeciality, int userLog, int userGoal, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
@@ -22,6 +22,9 @@ public class RegisterRequest extends StringRequest {
         map.put("userPassword", userPassword);
         map.put("userName", userName);
         map.put("userCourse", userCourse);
+        map.put("userSpeciality", userSpeciality);
+        map.put("userLog", userLog + "");
+        map.put("userGoal", userGoal + "");
 
     }
 

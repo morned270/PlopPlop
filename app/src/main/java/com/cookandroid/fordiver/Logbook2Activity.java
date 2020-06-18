@@ -64,7 +64,8 @@ public class Logbook2Activity extends AppCompatActivity {
                 String locationStr = item.getlocation();
                 Drawable iconDrawable = item.getIcon();
 
-
+                Intent intent_li = new Intent(Logbook2Activity.this, Logbook4Activity.class) ;
+                startActivity(intent_li);
                 //TODO : USE ITEM DATA. 클릭하면 진행할 이벤트
             }
         });
