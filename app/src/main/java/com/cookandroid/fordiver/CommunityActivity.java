@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 public class CommunityActivity extends Fragment {
 
     public CommunityActivity() {
+        /* It means nothing */
 
     }
 
