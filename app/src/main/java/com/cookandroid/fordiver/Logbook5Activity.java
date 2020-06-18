@@ -57,13 +57,10 @@ public class Logbook5Activity extends AppCompatActivity {
         cb_speed = findViewById(R.id.cb_speed);
         et_memo = findViewById(R.id.et_memo);
 
-
         Intent intent = getIntent();
         final String userID = intent.getStringExtra("userID");
         int userLog = intent.getIntExtra("userLog", 9);
-        //int userLog = Integer.parseInt(intent.getStringExtra("userLog"));
         tv_number.setText(String.valueOf(userLog + 1));
-        //tv_number.setText("" + 0);
 
         //오늘 날짜 출력
         Calendar mCalendar = Calendar.getInstance();

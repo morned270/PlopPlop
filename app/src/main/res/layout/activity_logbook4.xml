@@ -44,23 +44,23 @@
             android:text=" 삭제 " />
 
         <TextView
-            android:id="@+id/Text_LogNumber"
+            android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="15dp"
-            android:text="#2" />
+            android:text="숫자"
+            android:textSize="15dp" />
 
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="#2  2020.05.23" />
+        android:text="yyyy-MM-dd" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="필리핀, 말라파스쿠아" />
@@ -128,7 +128,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_SOP_1"
+                            android:id="@+id/tv_locationtype"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
@@ -156,7 +156,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_SOP_2"
+                            android:id="@+id/tv_point"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
@@ -221,7 +221,7 @@
                         android:padding="10dp">
 
                         <TextView
-                            android:id="@+id/LB_OP_1"
+                            android:id="@+id/tv_entertime"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -233,7 +233,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_OP_2"
+                            android:id="@+id/tv_temperature"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -249,7 +249,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_OP_3"
+                            android:id="@+id/tv_exittime"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
@@ -291,7 +291,7 @@
                         android:padding="10dp">
 
                         <TextView
-                            android:id="@+id/LB_OP_4"
+                            android:id="@+id/tv_resttime"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -303,7 +303,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_OP_5"
+                            android:id="@+id/tv_weight"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -383,7 +383,7 @@
                         android:padding="10dp">
 
                         <TextView
-                            android:id="@+id/LB_OP_6"
+                            android:id="@+id/tv_enterpressure"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
@@ -399,7 +399,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_OP_7"
+                            android:id="@+id/tv_view"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -410,7 +410,7 @@
                             android:text="M  " />
 
                         <TextView
-                            android:id="@+id/LB_OP_8"
+                            android:id="@+id/tv_wave"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -421,7 +421,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_OP_9"
+                            android:id="@+id/tv_exitpressure"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
@@ -467,7 +467,7 @@
                         android:padding="10dp">
 
                         <TextView
-                            android:id="@+id/LB_OP_10"
+                            android:id="@+id/tv_maxdepth"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left" />
@@ -483,7 +483,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/LB_OP_11"
+                            android:id="@+id/tv_avedepth"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right" />
@@ -509,7 +509,7 @@
                             android:text="안전정지준수" />
 
                         <CheckBox
-                            android:id="@+id/LB_OP_12"
+                            android:id="@+id/cb_stop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -528,7 +528,7 @@
                             android:text="상승속도준수" />
 
                         <CheckBox
-                            android:id="@+id/LB_OP_13"
+                            android:id="@+id/cb_speed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -560,7 +560,7 @@
                         android:textSize="10dp" />
 
                     <TextView
-                        android:id="@+id/LB_OP_14"
+                        android:id="@+id/tv_memo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
