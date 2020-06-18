@@ -14,6 +14,7 @@ import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.Marker;
 
 public class Logbook3Activity extends FragmentActivity implements OnMapReadyCallback {
@@ -58,5 +59,20 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
         marker.setPosition(new LatLng(35.1798159, 129.0750222));
         marker.setMap(naverMap);
 
+        Marker marker2 = new Marker();
+        marker2.setPosition(new LatLng(35.151324, 128.923114));
+        marker2.setMap(naverMap);
+
+        InfoWindow infoWindow = new InfoWindow();
+        infoWindow.setAdapter(new InfoWindow.DefaultTextAdapter(this) {
+            @NonNull
+            @Override
+            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+                return "Best Diving Point!";
+            }
+        });
+        infoWindow.open(marker);
+        infoWindow.open(marker2);
     }
+
 }
