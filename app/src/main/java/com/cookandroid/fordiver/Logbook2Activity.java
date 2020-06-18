@@ -12,14 +12,18 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.content.Intent;
 
+
+
 public class Logbook2Activity extends AppCompatActivity {
 
     Switch switchlogview;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook2);
+
 
         final ListView listview;
         Logbook2ListViewAdapter adapter;
@@ -71,7 +75,7 @@ public class Logbook2Activity extends AppCompatActivity {
         switchlogview.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked == true){
+                if (isChecked == true) {
                     //Toast.makeText(Logbook2Activity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
                 } else {
                     //Toast.makeText(Logbook2Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
@@ -83,6 +87,8 @@ public class Logbook2Activity extends AppCompatActivity {
         });
 
     }
+
+
 
 
 }

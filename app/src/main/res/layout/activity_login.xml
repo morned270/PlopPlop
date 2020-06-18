@@ -109,36 +109,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="81dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:text="회원가입"
+            android:textSize="50px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/crab"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:text="회원가입"
-            android:textSize="50px" />
+            android:textSize="50px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginStart="224dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="8dp"
+            android:text="로그인"
+            android:textSize="50px"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="55dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/clam"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:text=" 로그인 "
             android:textSize="50px"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.267"
             app:layout_constraintStart_toEndOf="@+id/btn_register"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InitialActivity">
+    tools:context=".InitialActivity"
+    android:background="@color/colorSand">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -21,7 +22,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/binggrae"
         android:text="퐁당퐁당"
         android:textColor="@color/colorBlack"
