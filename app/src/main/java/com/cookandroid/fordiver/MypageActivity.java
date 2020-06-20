@@ -20,7 +20,7 @@ import java.io.File;
 public class MypageActivity extends Fragment {
 
     private View view;
-    private TextView tv_name, tv_course;
+    private TextView tv_name, tv_course, tv_log;
 
     public MypageActivity() {
 
@@ -33,14 +33,17 @@ public class MypageActivity extends Fragment {
 
         tv_name = view.findViewById(R.id.tv_name);
         tv_course = view.findViewById(R.id.tv_course);
+        tv_log = view.findViewById(R.id.tv_log);
 
         Intent intent = getActivity().getIntent();
         String userID = intent.getStringExtra("userID");
         String userName = intent.getStringExtra("userName");
         String userCourse = intent.getStringExtra("userCourse");
+        int userLog = intent.getIntExtra("userLog", 9);
 
         tv_name.setText(userName);
         tv_course.setText(userCourse);
+        tv_log.setText(String.valueOf(userLog));
 
         File imgFile = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + userID + ".jpg");
 
