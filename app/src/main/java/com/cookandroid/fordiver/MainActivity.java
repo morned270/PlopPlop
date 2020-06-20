@@ -37,7 +37,7 @@ public class MainActivity extends Fragment{
         final String userID = intent.getStringExtra("userID");
         final int userLog = intent.getIntExtra("userLog", 5);
 
-        //tv_log.setText(String.valueOf(userLog));
+        tv_log.setText(String.valueOf(userLog));
 
 
         //추가하기 버튼을 눌렀을 때
@@ -60,6 +60,7 @@ public class MainActivity extends Fragment{
                 Intent intent = new Intent(getActivity(), Logbook2Activity.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("userLog", userLog);
+
                 startActivity(intent);
             }
         });

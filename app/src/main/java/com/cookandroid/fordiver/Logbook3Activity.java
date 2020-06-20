@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
@@ -20,10 +21,22 @@ import com.naver.maps.map.overlay.Marker;
 public class Logbook3Activity extends FragmentActivity implements OnMapReadyCallback {
 
     Switch switchlogview;
+    TextView tv_log;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook3);
+
+        Intent intent = getIntent();
+        final String userID = intent.getStringExtra("userID");
+        final int userLog = intent.getIntExtra("userLog", 9);
+
+
+        tv_log = findViewById(R.id.tv_log);
+        tv_log.setText(String.valueOf(userLog) + "회");
+
+
         MapFragment mapFragment = (MapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
@@ -40,6 +53,8 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
                 if (isChecked == true){
                     //Toast.makeText(Logbook3Activity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Logbook3Activity.this, Logbook2Activity.class);
+                    intent.putExtra("userID", userID);
+                    intent.putExtra("userLog", userLog);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                     finish();

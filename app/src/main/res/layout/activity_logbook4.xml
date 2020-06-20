@@ -22,27 +22,6 @@
         android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/Btn_Modify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="150dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="수정" />
-
-        <Button
-            android:id="@+id/Btn_Delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text=" 삭제 " />
-
         <TextView
             android:id="@+id/tv_number"
             android:layout_width="wrap_content"
