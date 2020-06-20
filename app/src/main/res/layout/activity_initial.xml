@@ -55,7 +55,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="160dp"
         android:fontFamily="@font/binggrae"
-        android:text="필수 애플리케이션"
+        android:text="로그북 작성 애플리케이션"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
