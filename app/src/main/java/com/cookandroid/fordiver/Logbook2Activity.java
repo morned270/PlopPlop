@@ -242,14 +242,15 @@ public class Logbook2Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked == true) {
                     //Toast.makeText(Logbook2Activity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
-                } else {
-                    //Toast.makeText(Logbook2Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Logbook2Activity.this, Logbook3Activity.class);
                     intent.putExtra("userID", logUser);
                     intent.putExtra("userLog", logNumber);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                     finish();
+                } else {
+                    //Toast.makeText(Logbook2Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });

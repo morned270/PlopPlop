@@ -24,6 +24,7 @@ public class Quiz4Activity extends AppCompatActivity {
         int wrong = 10-correct; /*선택한 퀴즈 단계 불러오기*/
         wrong_count.setText("틀린 개수 : "+wrong+"/10개");
 
+
         finishbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

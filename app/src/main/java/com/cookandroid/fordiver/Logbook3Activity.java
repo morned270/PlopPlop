@@ -51,13 +51,12 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked == true){
-                    //Toast.makeText(Logbook3Activity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
+
+                } else {
                     Intent intent = new Intent(Logbook3Activity.this, Logbook2Activity.class);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
-                } else {
-                    //Toast.makeText(Logbook3Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
-
+                    finish();
                 }
             }
         });
