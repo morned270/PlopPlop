@@ -35,13 +35,14 @@ public class MypageActivity extends Fragment {
         tv_course = view.findViewById(R.id.tv_course);
 
         Intent intent = getActivity().getIntent();
+        String userID = intent.getStringExtra("userID");
         String userName = intent.getStringExtra("userName");
         String userCourse = intent.getStringExtra("userCourse");
 
         tv_name.setText(userName);
         tv_course.setText(userCourse);
 
-        File imgFile = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/Picture1.jpg");
+        File imgFile = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + userID + ".jpg");
 
         if(imgFile.exists()){
 

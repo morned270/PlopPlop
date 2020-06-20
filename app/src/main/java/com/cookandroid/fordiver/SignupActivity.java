@@ -170,7 +170,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     private File createImageFile() throws IOException {
-        String imageFileName = "Picture" + String.valueOf(i) + ".jpg";
+        String imageFileName = et_id.getText().toString() + ".jpg";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = new File(storageDir, imageFileName);
         imageFilePath = image.getAbsolutePath();
