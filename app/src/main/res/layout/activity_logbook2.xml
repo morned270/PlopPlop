@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Logbook2Activity"
     android:orientation="vertical"
-    android:layout_margin="30dp">
+    android:padding="30dp"
+    android:background="@color/colorSand">
 
     <TextView
         android:layout_width="match_parent"

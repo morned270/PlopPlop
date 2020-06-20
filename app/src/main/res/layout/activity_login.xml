@@ -71,7 +71,8 @@
                 android:id="@+id/et_id"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:textColor="@color/colorWhite"/>
         </LinearLayout>
 
         <LinearLayout
@@ -97,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite" />
 
         </LinearLayout>
 
