@@ -7,19 +7,45 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.CountDownTimer;
 
 public class Quiz3Activity extends AppCompatActivity {
 
     int quiz_num=0;
     int correct_count=0;
-    int wrong_count=0;
     int[] allresult=new int[10];
-
+    private int time;
+    private TextView counter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz3);
+
         final Intent intent2quiz4 = new Intent(Quiz3Activity.this, Quiz4Activity.class);
+
+        counter = (TextView)findViewById(R.id.ow_quiz_time);
+        time=90;
+        quiz_num=0;
+        CountDownTimer mcount = null;
+
+        mcount = new CountDownTimer(90000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                if(millisUntilFinished/60000!=0) {
+                    counter.setText("" + millisUntilFinished / 60000 + "분" + (millisUntilFinished % 60000) / 1000 + "초");
+                }
+                else
+                    counter.setText(""+(millisUntilFinished % 60000) / 1000 + "초");
+                time--;
+            }
+            @Override
+            public void onFinish() {
+                intent2quiz4.putExtra("correct",correct_count); /*송신*/
+                startActivity(intent2quiz4);
+                finish();
+            }
+        };
+        mcount.start();
 
         TextView getcourse = (TextView)findViewById(R.id.ow_quiz_course); //퀴즈 난이도 쓸 textview 선언
 
@@ -55,8 +81,6 @@ public class Quiz3Activity extends AppCompatActivity {
                 int result = arr_anslist[quiz_num]==1?1:2; //정답이면 1 틀리면 2를
                 if(result==1)
                     correct_count++;
-                else
-                    wrong_count++;
 
                 allresult[quiz_num]=result; // 결과리스트 allresult에 저장
 
@@ -69,10 +93,10 @@ public class Quiz3Activity extends AppCompatActivity {
                     btn_ans_4.setText(arr_ans4[quiz_num]);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+(10-correct_count), Toast.LENGTH_SHORT).show();
                     intent2quiz4.putExtra("correct",correct_count); /*송신*/
-                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
+                    finish();
                 //결과 화면으로 넘어가기
                 }
             }
@@ -85,8 +109,6 @@ public class Quiz3Activity extends AppCompatActivity {
                 int result = arr_anslist[quiz_num]==2?1:2; //정답이면 1 틀리면 2를
                 if(result==1)
                     correct_count++;
-                else
-                    wrong_count++;
 
                 allresult[quiz_num]=result; // 결과리스트 allresult에 저장
 
@@ -99,10 +121,10 @@ public class Quiz3Activity extends AppCompatActivity {
                     btn_ans_4.setText(arr_ans4[quiz_num]);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+(10-correct_count), Toast.LENGTH_SHORT).show();
                     intent2quiz4.putExtra("correct",correct_count); /*송신*/
-                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
+                    finish();
                     //결과 화면으로 넘어가기
                 }
             }
@@ -115,8 +137,6 @@ public class Quiz3Activity extends AppCompatActivity {
                 int result = arr_anslist[quiz_num]==3?1:2; //정답이면 1 틀리면 2를
                 if(result==1)
                     correct_count++;
-                else
-                    wrong_count++;
 
                 allresult[quiz_num]=result; // 결과리스트 allresult에 저장
 
@@ -129,10 +149,10 @@ public class Quiz3Activity extends AppCompatActivity {
                     btn_ans_4.setText(arr_ans4[quiz_num]);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+(10-correct_count), Toast.LENGTH_SHORT).show();
                     intent2quiz4.putExtra("correct",correct_count); /*송신*/
-                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
+                    finish();
                     //결과 화면으로 넘어가기
                 }
             }
@@ -145,8 +165,6 @@ public class Quiz3Activity extends AppCompatActivity {
                 int result = arr_anslist[quiz_num]==4?1:2; //정답이면 1 틀리면 2를
                 if(result==1)
                     correct_count++;
-                else
-                    wrong_count++;
 
                 allresult[quiz_num]=result; // 결과리스트 allresult에 저장
 
@@ -159,13 +177,14 @@ public class Quiz3Activity extends AppCompatActivity {
                     btn_ans_4.setText(arr_ans4[quiz_num]);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+wrong_count, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "맞은 문제는 "+correct_count+"개, 틀린문제는 "+(10-correct_count), Toast.LENGTH_SHORT).show();
                     intent2quiz4.putExtra("correct",correct_count); /*송신*/
-                    intent2quiz4.putExtra("wrong",wrong_count); /*송신*/
                     startActivity(intent2quiz4);
+                    finish();
                     //결과 화면으로 넘어가기
                 }
             }
         });
     }
+
 }
