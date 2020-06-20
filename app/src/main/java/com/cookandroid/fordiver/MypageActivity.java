@@ -43,7 +43,7 @@ public class MypageActivity extends Fragment {
 
         tv_name.setText(userName);
         tv_course.setText(userCourse);
-        tv_log.setText(String.valueOf(userLog));
+        tv_log.setText(String.valueOf(userLog) + "회");
 
         File imgFile = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + userID + ".jpg");
 
