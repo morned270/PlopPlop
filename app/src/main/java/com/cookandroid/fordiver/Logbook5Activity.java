@@ -215,8 +215,7 @@ public class Logbook5Activity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             if(success){    // 로그북 등록에 성공한 경우
-                                Toast.makeText(getApplicationContext(), "로그북 등록에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
-
+                                //Toast.makeText(getApplicationContext(), "로그북 등록에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
 
                                 /*사용자의 로그수 수정하기 시작 코드*/
                                 final int newLog = logNumber;
@@ -230,7 +229,7 @@ public class Logbook5Activity extends AppCompatActivity {
                                                 String userName = jsonObject.getString("userName");
                                                 String userCourse = jsonObject.getString("userCourse");
 
-                                                Toast.makeText(getApplicationContext(), "로그수 수정에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getApplicationContext(), "로그북 등록에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(Logbook5Activity.this, MenuActivity.class);
                                                 intent.putExtra("userName", userName);
                                                 intent.putExtra("userCourse", userCourse);
