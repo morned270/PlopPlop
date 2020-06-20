@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,12 +54,14 @@ public class SignupActivity extends AppCompatActivity {
         et_name = findViewById(R.id.et_name);
         imageView = findViewById(R.id.image);
 
+        /* 프로필 사진 이미지뷰를 클릭한 경우 */
         imageView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
+                //Log.d("my_tag", intent.getData().getPath());
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
@@ -130,6 +133,7 @@ public class SignupActivity extends AppCompatActivity {
 
     }
 
+    /* 사진 디바이스에서 선택해서 추가하는 코드 */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
