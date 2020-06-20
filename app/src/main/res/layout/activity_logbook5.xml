@@ -41,7 +41,7 @@
         android:id="@+id/et_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="필리핀, 말라파스쿠아" />
+        android:hint="나라이름 지역이름" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -182,6 +182,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
+                            android:hint="12:00"
                             android:inputType="time" />
 
                         <View
@@ -194,7 +195,8 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
                         <View
                             android:layout_width="0dp"
@@ -206,6 +208,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
+                            android:hint="12:00"
                             android:inputType="time" />
 
                     </LinearLayout>
@@ -246,6 +249,7 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
+                            android:hint="01:00"
                             android:inputType="time" />
 
                         <View
@@ -258,7 +262,8 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
 
                     </LinearLayout>
@@ -332,7 +337,8 @@
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
                         <View
                             android:layout_width="0dp"
@@ -344,13 +350,15 @@
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
                         <EditText
                             android:id="@+id/et_wave"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:hint="높음" />
 
                         <View
                             android:layout_width="0dp"
@@ -362,7 +370,8 @@
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
                     </LinearLayout>
                     <!--input 끝-->
@@ -402,7 +411,8 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
                         <View
                             android:layout_width="0dp"
@@ -414,7 +424,8 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="number"/>
+                            android:hint="0"
+                            android:inputType="number" />
 
                     </LinearLayout>
                     <!--최대수심, 평균수심 edittext 끝-->
@@ -471,17 +482,11 @@
                         android:layout_gravity="left"
                         android:text="메모" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:text="*관찰한 수중생물, 느낀 점, etc"
-                        android:textSize="10dp" />
-
                     <EditText
                         android:id="@+id/et_memo"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:hint="*관찰한 수중생물, 느낀 점, etc" />
                 </LinearLayout>
 
                 <LinearLayout

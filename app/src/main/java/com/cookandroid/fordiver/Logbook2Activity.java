@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
@@ -29,6 +30,7 @@ public class Logbook2Activity extends AppCompatActivity {
     ListView listview;
     Logbook2ListViewAdapter adapter;
     Switch switchlogview;
+    TextView tv_log;
 
     @Override
 
@@ -49,7 +51,10 @@ public class Logbook2Activity extends AppCompatActivity {
         //Main.java 에서 데이터 받아오기
         Intent intent = getIntent();
         final String logUser = intent.getStringExtra("userID");
-        int logNumber = intent.getIntExtra("userLog", 9);
+        final int logNumber = intent.getIntExtra("userLog", 9);
+
+        tv_log = findViewById(R.id.tv_log);
+        tv_log.setText(String.valueOf(logNumber) + "회");
 
 
 //        for( int i = 1; i <= logNumber; i++) {
@@ -155,7 +160,7 @@ public class Logbook2Activity extends AppCompatActivity {
                                 int logSpeedFollow = jsonObject.getInt("logSpeedFollow");
                                 String logMemo = jsonObject.getString("logMemo");
 
-                                Toast.makeText(getApplicationContext(), "셀렉트에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), "셀렉트에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Logbook2Activity.this, Logbook4Activity.class);
                                 intent.putExtra("logUser", logUser);
                                 intent.putExtra("logNumber", logNumber);
@@ -178,7 +183,6 @@ public class Logbook2Activity extends AppCompatActivity {
                                 intent.putExtra("logSpeedFollow", logSpeedFollow);
                                 intent.putExtra("logMemo", logMemo);
                                 startActivity(intent);
-                                finish();
                             }
                             else{   // 셀렉트쿼리에 실패한 경우
                                 Toast.makeText(getApplicationContext(), "셀렉트에 실패하셨습니다.", Toast.LENGTH_SHORT).show();
@@ -194,12 +198,6 @@ public class Logbook2Activity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(Logbook2Activity.this);
                 queue.add(logReadRequest);
                 /*셀렉트 쿼리 코드 끝*/
-
-
-
-
-
-
 
                 //Intent intent_li = new Intent(Logbook2Activity.this, Logbook4Activity.class) ;
                 //startActivity(intent_li);
@@ -217,6 +215,8 @@ public class Logbook2Activity extends AppCompatActivity {
                 } else {
                     //Toast.makeText(Logbook2Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Logbook2Activity.this, Logbook3Activity.class);
+                    intent.putExtra("userID", logUser);
+                    intent.putExtra("userLog", logNumber);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                     finish();
