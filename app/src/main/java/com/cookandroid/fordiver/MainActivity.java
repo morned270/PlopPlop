@@ -60,7 +60,6 @@ public class MainActivity extends Fragment{
                 Intent intent = new Intent(getActivity(), Logbook2Activity.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("userLog", userLog);
-
                 startActivity(intent);
             }
         });
