@@ -100,21 +100,17 @@ public class Logbook2Activity extends AppCompatActivity {
 
         // 첫 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(Logbook2Activity.this, R.drawable.diverimg),
-                "1", "날짜 : 2020.05.27", "말라파스쿠아");
+                "1", "2019-05-24", "필리핀 보홀");
         // 두 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-                "2", "날짜 : 2020.04.20", "세부");
-//        // 세 번째 아이템 추가.
-//        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-//                "#3", "날짜 : 2020.04.19", "세부");
-//        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-//                "#4", "날짜 : 2020.04.18", "세부");
-//        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-//                "#5", "날짜 : 2020.01.03", "제주도");
-//        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-//                "#6", "날짜 : 2020.01.02", "제주도");
-//        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-//                "#7", "날짜 : 2020.01.02", "제주도");
+                "2", "2019-07-27", "한국 제주도 송악산");
+        // 세 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
+                "3", "2020-05-15", "말레이시아 파단섬");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
+                "4", "2020-06-07", "이집트 홍해");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
+                "5", "2020-06-14", "한국 울릉도");
 
 
         //위에서 생성한 Listview에서 클릭했을 때 이벤트 정의
@@ -223,7 +219,7 @@ public class Logbook2Activity extends AppCompatActivity {
                     Intent intent = new Intent(Logbook2Activity.this, Logbook3Activity.class);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
-
+                    finish();
                 }
             }
         });
