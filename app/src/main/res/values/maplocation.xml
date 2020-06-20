@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="loca_name">
+        <item>필리핀 말라파스쿠아</item>
+        <item>필리핀 로곤비치</item>
+        <item>필리핀 보홀</item>
+        <item>한국 제주도 문섬</item>
+        <item>한국 제주도 송악산</item>
+        <item>팔라우 블루코너</item>
+        <item>말레이시아 시파단 섬</item>
+        <item>이집트 홍해</item>
+        <item>한국 울릉도</item>
+    </string-array>
+
+    <!--위도-->
+    <string-array name="loca_Latitude">
+        <item>11.335827</item>
+        <item>11.329376</item>
+        <item>9.891444</item>
+        <item>33.227190</item>
+        <item>33.197758</item>
+        <item>7.133613</item>
+        <item>4.114970</item>
+        <item>20.441708</item>
+        <item>37.485372</item>
+    </string-array>
+
+    <!--경도-->
+    <string-array name="loca_Longitude">
+        <item>124.115625</item>
+        <item>124.114101</item>
+        <item>124.217845</item>
+        <item>126.565588</item>
+        <item>126.291879</item>
+        <item>134.220410</item>
+        <item>118.628659</item>
+        <item>38.468338</item>
+        <item>130.901666</item>
+    </string-array>
+</resources>
