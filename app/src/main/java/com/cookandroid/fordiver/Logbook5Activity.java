@@ -2,22 +2,27 @@ package com.cookandroid.fordiver;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -32,8 +37,11 @@ import org.json.JSONObject;
 
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
+import com.kyanogen.signatureview.SignatureView;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -46,8 +54,8 @@ public class Logbook5Activity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 672;
     private String imageFilePath;
     private Uri photoUri;
+    private Uri photoUri2;
     private Button btn_capture;
-
 
     private TextView tv_number, tv_date;
     private EditText et_location, et_temperature, et_entertime, et_exittime, et_resttime, et_weight, et_enterpressure, et_exitpressure;
@@ -55,6 +63,11 @@ public class Logbook5Activity extends AppCompatActivity {
     private CheckBox cb_stop, cb_speed;
     private Button btn_register;
 
+    Bitmap bitmap;
+    Button clear,save;
+    SignatureView signatureView;
+    String path;
+    private static final String IMAGE_DIRECTORY = "/signdemo";
 
     String userID;
 
@@ -71,11 +84,32 @@ public class Logbook5Activity extends AppCompatActivity {
                 .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
                 .check();
 
+        //서명 관련한 것들
+        signatureView =  (SignatureView) findViewById(R.id.signature_view);
+        clear = (Button) findViewById(R.id.clear);
+        save = (Button) findViewById(R.id.save);
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signatureView.clearCanvas();
+            }
+        });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bitmap = signatureView.getSignatureBitmap();
+                path = saveImage(bitmap);
+                Toast.makeText(getApplicationContext(), "인증에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         //촬영 버튼을 눌렀을 경우
 
         btn_capture = findViewById(R.id.btn_capture);
         btn_capture.setOnClickListener(new View.OnClickListener() {
-        /* findViewById(R.id.btn_capture).setOnClickListener(new View.OnClickListener() { */
+            /* findViewById(R.id.btn_capture).setOnClickListener(new View.OnClickListener() { */
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);    //카메라 실행 구문
@@ -96,6 +130,7 @@ public class Logbook5Activity extends AppCompatActivity {
                 }
             }
         });
+
 
         // 아이디 값 찾아주기
         tv_number = findViewById(R.id.tv_number);
@@ -118,7 +153,7 @@ public class Logbook5Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
         userID = intent.getStringExtra("userID");
-        int userLog = intent.getIntExtra("userLog", 9);
+        final int userLog = intent.getIntExtra("userLog", 9);
         tv_number.setText(String.valueOf(userLog + 1));
 
         //오늘 날짜 출력
@@ -192,8 +227,13 @@ public class Logbook5Activity extends AppCompatActivity {
                                             JSONObject jsonObject = new JSONObject(response);
                                             boolean success = jsonObject.getBoolean("success");
                                             if(success){    // 로그수 수정에 성공한 경우
+                                                String userName = jsonObject.getString("userName");
+                                                String userCourse = jsonObject.getString("userCourse");
+
                                                 Toast.makeText(getApplicationContext(), "로그수 수정에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(Logbook5Activity.this, MenuActivity.class);
+                                                intent.putExtra("userName", userName);
+                                                intent.putExtra("userCourse", userCourse);
                                                 intent.putExtra("userLog", newLog);
                                                 startActivity(intent);
                                                 finish();
@@ -304,5 +344,57 @@ public class Logbook5Activity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "권한이 거부됨", Toast.LENGTH_SHORT).show();
         }
     };
+
+    public String saveImage(Bitmap myBitmap) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+        File wallpaperDirectory = new File(
+                Environment.getExternalStorageDirectory() + IMAGE_DIRECTORY /*iDyme folder*/);
+        // have the object build the directory structure, if needed.
+        if (!wallpaperDirectory.exists()) {
+            wallpaperDirectory.mkdirs();
+            Log.d("hhhhh",wallpaperDirectory.toString());
+        }
+
+        try {
+            checkPermission();
+
+            File f = new File(wallpaperDirectory, userID +"_master"+ tv_number.getText().toString() + ".jpg");
+            f.createNewFile();
+            FileOutputStream fo = new FileOutputStream(f);
+            fo.write(bytes.toByteArray());
+            MediaScannerConnection.scanFile(Logbook5Activity.this,
+                    new String[]{f.getPath()},
+                    new String[]{"image/jpeg"}, null);
+            fo.close();
+            Log.d("TAG", "File Saved::--->" + f.getAbsolutePath());
+
+            return f.getAbsolutePath();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        return "";
+
+    }
+
+    private void checkPermission() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // 마시멜로우 버전과 같거나 이상이라면
+            if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                    || checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                if(shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    Toast.makeText(this, "외부 저장소 사용을 위해 읽기/쓰기 필요", Toast.LENGTH_SHORT).show();
+                }
+
+                requestPermissions(new String[]
+                                {Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE},
+                        2);  //마지막 인자는 체크해야될 권한 갯수
+
+            } else {
+                //Toast.makeText(this, "권한 승인되었음", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
 
 }

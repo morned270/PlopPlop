@@ -3,10 +3,11 @@
     package="com.cookandroid.fordiver">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" /> <!--카메라 권한-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    <!--외부저장소에 쓰기 권한-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />     <!--외부저장소에 읽기 권한-->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 카메라 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 외부저장소에 쓰기 권한 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!-- 외부저장소에 읽기 권한 -->
     <!-- 인터넷 권한 설정 -->
     <application
         android:allowBackup="true"
@@ -22,16 +23,18 @@
         <activity android:name=".Logbook3Activity" />
         <activity android:name=".Logbook4Activity" />
         <activity android:name=".Logbook5Activity" />
-        <activity android:name=".InitialActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        <activity android:name=".InitialActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Quiz2Activity" />
         <activity android:name=".Quiz3Activity" />
         <activity android:name=".Quiz3_2Activity" />
-        <activity android:name=".MenuActivity" ></activity>
-        <activity android:name=".Quiz4Activity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".Quiz4Activity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -43,11 +46,11 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="x653pgrtyk" />
 
+        <activity android:name=".SignatureActivity"></activity>
     </application>
 
 </manifest>

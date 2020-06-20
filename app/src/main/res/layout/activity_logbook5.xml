@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:id="@+id/tv_number"
@@ -29,19 +29,6 @@
             android:text="번째 로그북"/>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="오늘 날짜 yyyy-MM-dd"
-        android:textColor="#506EA5" />
-
-    <EditText
-        android:id="@+id/et_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="나라이름 지역이름" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,12 +48,25 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="오늘 날짜 yyyy-MM-dd"
+                    android:textColor="#506EA5" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <!--Diving Position Type-->
+
+                    <EditText
+                        android:id="@+id/et_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="나라이름 지역이름" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -520,13 +520,6 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/dive_master" />
 
                     <ImageView
                         android:id="@+id/iv_result"
@@ -546,12 +539,56 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="등록" />
+        android:orientation="vertical">
 
+        <com.kyanogen.signatureview.SignatureView
+            android:id="@+id/signature_view"
+            android:layout_width="248dp"
+            android:layout_height="103dp"
+            android:layout_weight="1"
+            app:backgroundColor="@color/colorGray"
+            app:enableSignature="true"
+            app:penColor="@color/colorWhite"
+            app:penSize="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="clear" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="save" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="등록"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </LinearLayout>

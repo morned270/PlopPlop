@@ -126,6 +126,18 @@ public class Logbook4Activity extends AppCompatActivity implements OnMapReadyCal
 
         }
 
+        File imgFile2 = new File("/storage/emulated/0/signdemo/" + logUser + "_master" + String.valueOf(logNumber) + ".jpg");
+
+        if(imgFile2.exists()){
+
+            Bitmap myBitmap2 = BitmapFactory.decodeFile(imgFile2.getAbsolutePath());
+
+            ImageView myImage2 = (ImageView)findViewById(R.id.iv_sign);
+
+            myImage2.setImageBitmap(myBitmap2);
+
+        }
+
         MapFragment mapFragment = (MapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
