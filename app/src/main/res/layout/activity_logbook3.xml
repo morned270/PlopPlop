@@ -79,10 +79,10 @@
             android:name="com.naver.maps.map.MapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:navermap_latitude="35.1798159"
-            app:navermap_longitude="129.0750222"
+            app:navermap_latitude="10.277600"
+            app:navermap_longitude="123.972569"
             app:navermap_mapType="Basic"
-            app:navermap_zoom="8" />
+            app:navermap_zoom="3" />
 
     </LinearLayout>
 

@@ -62,16 +62,16 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="아이디"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/et_id"
-                android:layout_width="226dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:gravity="right"/>
+                android:textSize="20dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -86,18 +86,18 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="비밀번호"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/et_pass"
-                android:layout_width="wrap_content"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:ems="10"
-                android:inputType="textPassword"
-                android:gravity="right"/>
+                android:inputType="textPassword" />
 
         </LinearLayout>
 
