@@ -7,10 +7,13 @@
     android:background="@color/colorWhite">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
         android:id="@+id/imageView1"
-        android:layout_weight="1" />
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY" />
 
     <LinearLayout
         android:orientation="vertical"

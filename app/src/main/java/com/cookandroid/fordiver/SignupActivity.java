@@ -51,7 +51,6 @@ public class SignupActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 672;
     private String imageFilePath;
     private Uri photoUri;
-    public int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +86,6 @@ public class SignupActivity extends AppCompatActivity {
                     File photoFile = null;
                     try{
                         photoFile = createImageFile();
-                        i++;
                     } catch(IOException e){
 
                     }

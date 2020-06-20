@@ -1,10 +1,13 @@
 package com.cookandroid.fordiver;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +17,8 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
 
 public class Logbook4Activity extends AppCompatActivity {
 
@@ -48,6 +53,7 @@ public class Logbook4Activity extends AppCompatActivity {
         tv_memo= findViewById(R.id.tv_memo);
 
         Intent intent = getIntent();
+        String logUser = intent.getStringExtra("logUser");
         int logNumber = intent.getIntExtra("logNumber", 9);
         String logDate = intent.getStringExtra("logDate");
         String logLocation = intent.getStringExtra("logLocation");
@@ -91,6 +97,18 @@ public class Logbook4Activity extends AppCompatActivity {
             cb_speed.setChecked(true);
         }
         tv_memo.setText(logMemo);
+
+        File imgFile = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + logUser + "_log" + String.valueOf(logNumber) + ".jpg");
+
+        if(imgFile.exists()){
+
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+            ImageView myImage = (ImageView)findViewById(R.id.iv_result);
+
+            myImage.setImageBitmap(myBitmap);
+
+        }
 
     }
 }

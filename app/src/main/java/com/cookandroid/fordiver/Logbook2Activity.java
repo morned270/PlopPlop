@@ -1,5 +1,8 @@
 package com.cookandroid.fordiver;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -22,6 +26,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 
 
@@ -31,6 +36,12 @@ public class Logbook2Activity extends AppCompatActivity {
     Logbook2ListViewAdapter adapter;
     Switch switchlogview;
     TextView tv_log;
+
+    ImageView img1;
+    ImageView img2;
+    ImageView img3;
+    ImageView img4;
+    ImageView img5;
 
     @Override
 
@@ -102,20 +113,39 @@ public class Logbook2Activity extends AppCompatActivity {
 //        }
 
 
+        File imgFile1 = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + "plopplop" + "_log1.jpg");
+        File imgFile2 = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + "plopplop" + "_log2.jpg");
+        File imgFile3 = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + "plopplop" + "_log3.jpg");
+        File imgFile4 = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + "plopplop" + "_log4.jpg");
+        File imgFile5 = new File("/sdcard/Android/data/com.cookandroid.fordiver/files/Pictures/" + "plopplop" + "_log5.jpg");
 
-        // 첫 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(Logbook2Activity.this, R.drawable.diverimg),
-                "1", "2019-05-24", "필리핀 보홀");
-        // 두 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-                "2", "2019-07-27", "한국 제주도 송악산");
-        // 세 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-                "3", "2020-05-15", "말레이시아 파단섬");
-        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-                "4", "2020-06-07", "이집트 홍해");
-        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.diverimg),
-                "5", "2020-06-14", "한국 울릉도");
+        if(imgFile1.exists()){
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile1.getAbsolutePath());
+            Drawable drawable = new BitmapDrawable(getResources(), myBitmap);
+            adapter.addItem(drawable, "1", "2019-05-24", "필리핀 보홀");
+        }
+        if(imgFile2.exists()){
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile2.getAbsolutePath());
+            Drawable drawable = new BitmapDrawable(getResources(), myBitmap);
+            adapter.addItem(drawable, "2", "2019-07-27", "한국 제주도 송악산");
+        }
+        if(imgFile3.exists()){
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile3.getAbsolutePath());
+            Drawable drawable = new BitmapDrawable(getResources(), myBitmap);
+            adapter.addItem(drawable, "3", "2020-05-15", "말레이시아 파단섬");
+        }
+        if(imgFile4.exists()){
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile4.getAbsolutePath());
+            Drawable drawable = new BitmapDrawable(getResources(), myBitmap);
+            adapter.addItem(drawable, "4", "2020-06-07", "이집트 홍해");
+        }
+        if(imgFile5.exists()){
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile5.getAbsolutePath());
+            Drawable drawable = new BitmapDrawable(getResources(), myBitmap);
+            adapter.addItem(drawable, "5", "2020-06-14", "한국 울릉도");
+        }
+
+
 
 
         //위에서 생성한 Listview에서 클릭했을 때 이벤트 정의
@@ -212,14 +242,15 @@ public class Logbook2Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked == true) {
                     //Toast.makeText(Logbook2Activity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
-                } else {
-                    //Toast.makeText(Logbook2Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Logbook2Activity.this, Logbook3Activity.class);
                     intent.putExtra("userID", logUser);
                     intent.putExtra("userLog", logNumber);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                     finish();
+                } else {
+                    //Toast.makeText(Logbook2Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
