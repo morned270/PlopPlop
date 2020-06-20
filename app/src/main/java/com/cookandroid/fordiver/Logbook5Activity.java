@@ -182,7 +182,7 @@ public class Logbook5Activity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "로그북 등록에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
 
 
-                                //*사용자의 로그수 수정하기 시작 코드*//
+                                /*사용자의 로그수 수정하기 시작 코드*/
                                 int newLog = logNumber;
                                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                                     @Override
@@ -192,80 +192,7 @@ public class Logbook5Activity extends AppCompatActivity {
                                             boolean success = jsonObject.getBoolean("success");
                                             if(success){    // 로그수 수정에 성공한 경우
                                                 Toast.makeText(getApplicationContext(), "로그수 수정에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
-
-
-                                                /*셀렉트 쿼리 코드 시작*/
-                                                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                                                    @Override
-                                                    public void onResponse(String response) {
-                                                        try {
-                                                            JSONObject jsonObject = new JSONObject(response);
-                                                            boolean success = jsonObject.getBoolean("success");
-                                                            if(success){    // 셀렉트쿼리에 성공한 경우
-
-                                                                //전해주고싶은 데이터
-                                                                String logUser = jsonObject.getString("logUser");
-                                                                int logNumber = jsonObject.getInt("logNumber");
-                                                                String logDate = jsonObject.getString("logDate");
-                                                                String logLocation = jsonObject.getString("logLocation");
-                                                                String logLocationType = jsonObject.getString("logLocationType");
-                                                                String logPoint = jsonObject.getString("logPoint");
-                                                                int logTemperature = jsonObject.getInt("logTemperature");
-                                                                String logEnterTime = jsonObject.getString("logEnterTime");
-                                                                String logExitTime = jsonObject.getString("logExitTime");
-                                                                String logRestTime = jsonObject.getString("logRestTime");
-                                                                int logWeight = jsonObject.getInt("logWeight");
-                                                                int logEnterPressure = jsonObject.getInt("logEnterPressure");
-                                                                int logExitPressure = jsonObject.getInt("logExitPressure");
-                                                                int logView = jsonObject.getInt("logView");
-                                                                String logWave = jsonObject.getString("logWave");
-                                                                int logMaxDepth = jsonObject.getInt("logMaxDepth");
-                                                                int logAveDepth = jsonObject.getInt("logAveDepth");
-                                                                int logStopFollow = jsonObject.getInt("logStopFollow");
-                                                                int logSpeedFollow = jsonObject.getInt("logSpeedFollow");
-                                                                String logMemo = jsonObject.getString("logMemo");
-
-                                                                Toast.makeText(getApplicationContext(), "셀렉트에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
-                                                                Intent intent = new Intent(Logbook5Activity.this, Logbook4Activity.class);
-                                                                intent.putExtra("logUser", logUser);
-                                                                intent.putExtra("logNumber", logNumber);
-                                                                intent.putExtra("logDate", logDate);
-                                                                intent.putExtra("logLocation", logLocation);
-                                                                intent.putExtra("logLocationType", logLocationType);
-                                                                intent.putExtra("logPoint", logPoint);
-                                                                intent.putExtra("logTemperature", logTemperature);
-                                                                intent.putExtra("logEnterTime", logEnterTime);
-                                                                intent.putExtra("logExitTime", logExitTime);
-                                                                intent.putExtra("logRestTime", logRestTime);
-                                                                intent.putExtra("logWeight", logWeight);
-                                                                intent.putExtra("logEnterPressure", logEnterPressure);
-                                                                intent.putExtra("logExitPressure", logExitPressure);
-                                                                intent.putExtra("logView", logView);
-                                                                intent.putExtra("logWave", logWave);
-                                                                intent.putExtra("logMaxDepth", logMaxDepth);
-                                                                intent.putExtra("logAveDepth", logAveDepth);
-                                                                intent.putExtra("logStopFollow", logStopFollow);
-                                                                intent.putExtra("logSpeedFollow", logSpeedFollow);
-                                                                intent.putExtra("logMemo", logMemo);
-                                                                startActivity(intent);
-                                                                finish();
-                                                            }
-                                                            else{   // 셀렉트쿼리에 실패한 경우
-                                                                Toast.makeText(getApplicationContext(), "셀렉트에 실패하셨습니다.", Toast.LENGTH_SHORT).show();
-                                                                return;
-                                                            }
-                                                        } catch (JSONException e) {
-                                                            e.printStackTrace();
-                                                        }
-                                                    }
-                                                };
-
-                                                LogReadRequest logReadRequest = new LogReadRequest(logUser, logNumber, responseListener);
-                                                RequestQueue queue = Volley.newRequestQueue(Logbook5Activity.this);
-                                                queue.add(logReadRequest);
-                                                /*셀렉트 쿼리 코드 끝*/
-
-
+                                                finish();
 
                                             }
                                             else{   // 로그수 수정에 실패한 경우
