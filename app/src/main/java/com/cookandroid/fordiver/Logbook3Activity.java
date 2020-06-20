@@ -1,6 +1,9 @@
 package com.cookandroid.fordiver;
 
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.UiThread;
 import android.support.v4.app.FragmentActivity;
@@ -8,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
@@ -17,26 +19,24 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.util.GeometryUtils;
+
+import java.io.IOException;
+import java.util.List;
 
 public class Logbook3Activity extends FragmentActivity implements OnMapReadyCallback {
 
-    Switch switchlogview;
-    TextView tv_log;
+    String et_location = "보홀"; //db에서 값을 받으면
 
+    String location[] = {"필리핀", "보홀", "말라파스쿠아"}; //주소
+    double latitude[]  = {10.277600, 9.911736, 11.336457}; //경도
+    double longitude[] =  {123.972569, 124.217833, 10.415150}; //위도
+
+    Switch switchlogview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook3);
-
-        Intent intent = getIntent();
-        final String userID = intent.getStringExtra("userID");
-        final int userLog = intent.getIntExtra("userLog", 9);
-
-
-        tv_log = findViewById(R.id.tv_log);
-        tv_log.setText(String.valueOf(userLog) + "회");
-
-
         MapFragment mapFragment = (MapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
@@ -53,11 +53,8 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
                 if (isChecked == true){
                     //Toast.makeText(Logbook3Activity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Logbook3Activity.this, Logbook2Activity.class);
-                    intent.putExtra("userID", userID);
-                    intent.putExtra("userLog", userLog);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
-                    finish();
                 } else {
                     //Toast.makeText(Logbook3Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
 
@@ -71,24 +68,16 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         // ...
-        Marker marker = new Marker();
-        marker.setPosition(new LatLng(35.1798159, 129.0750222));
-        marker.setMap(naverMap);
 
-        Marker marker2 = new Marker();
-        marker2.setPosition(new LatLng(35.151324, 128.923114));
-        marker2.setMap(naverMap);
-
-        InfoWindow infoWindow = new InfoWindow();
-        infoWindow.setAdapter(new InfoWindow.DefaultTextAdapter(this) {
-            @NonNull
-            @Override
-            public CharSequence getText(@NonNull InfoWindow infoWindow) {
-                return "Best Diving Point!";
+        Marker marker[] = new Marker[location.length];
+        for(int i=0; i<location.length; i++){
+            marker[i] = new Marker();
+            if(et_location == location[i]){
+                marker[i].setPosition(new LatLng(latitude[i], longitude[i]));
+                marker[i].setCaptionText(location[i]);
+                marker[i].setMap(naverMap);
             }
-        });
-        infoWindow.open(marker);
-        infoWindow.open(marker2);
-    }
+        }
 
+    }
 }
