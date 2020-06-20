@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Logbook5Activity"
     android:orientation="vertical"
-    android:background="@color/colorSand"
     android:padding="30dp">
 
     <LinearLayout
@@ -298,7 +297,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="입수공기압" />
+                            android:text="입수공기압"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -309,13 +309,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="시야      " />
+                            android:text="시야      "
+                            android:textColor="@color/colorWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="      파도" />
+                            android:text="      파도"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -326,7 +328,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="출수공기압" />
+                            android:text="출수공기압"
+                            android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
                     <!--text 끝-->
@@ -393,7 +396,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="최대수심" />
+                            android:text="최대수심"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -404,7 +408,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="평균수심" />
+                            android:text="평균수심"
+                            android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
                     <!--최대수심, 평균수심 text 끝-->
@@ -448,7 +453,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="안전정지준수" />
+                            android:text="안전정지준수"
+                            android:textColor="@color/colorWhite" />
 
                         <CheckBox
                             android:id="@+id/cb_stop"
@@ -466,7 +472,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="상승속도준수" />
+                            android:text="상승속도준수"
+                            android:textColor="@color/colorWhite" />
 
                         <CheckBox
                             android:id="@+id/cb_speed"
