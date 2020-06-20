@@ -34,7 +34,8 @@
         android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="오늘 날짜 yyyy-MM-dd" />
+        android:text="오늘 날짜 yyyy-MM-dd"
+        android:textColor="#506EA5" />
 
     <EditText
         android:id="@+id/et_location"
@@ -77,7 +78,8 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="left"
                             android:gravity="center_vertical"
-                            android:text="다이빙 위치" />
+                            android:text="다이빙 위치"
+                            android:textColor="#50BEBE" />
 
                         <View
                             android:layout_width="0dp"
@@ -106,7 +108,8 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="left"
                             android:gravity="center_vertical"
-                            android:text="다이빙 포인트" />
+                            android:text="다이빙 포인트"
+                            android:textColor="#50BEBE" />
 
                         <View
                             android:layout_width="0dp"
@@ -146,7 +149,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="입수시간" />
+                            android:text="입수시간"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -157,7 +161,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="수면온도" />
+                            android:text="수면온도"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -168,7 +173,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="출수시간" />
+                            android:text="출수시간"
+                            android:textColor="#D29953" />
 
                     </LinearLayout>
                     <!--입수 출수시간 text 끝-->
@@ -226,7 +232,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="수면휴식시간" />
+                            android:text="수면휴식시간"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -237,7 +244,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="웨이트 무게" />
+                            android:text="웨이트 무게"
+                            android:textColor="#D29953" />
 
                     </LinearLayout>
                     <!--입수 출수시간 text 끝-->
@@ -497,7 +505,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:text="메모" />
+                        android:text="메모"
+                        android:textColor="#506EA5" />
 
                     <EditText
                         android:id="@+id/et_memo"
