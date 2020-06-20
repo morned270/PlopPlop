@@ -42,6 +42,7 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
                     Intent intent = new Intent(Logbook3Activity.this, Logbook2Activity.class);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
+                    finish();
                 } else {
                     //Toast.makeText(Logbook3Activity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
 
