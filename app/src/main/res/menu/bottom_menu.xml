@@ -8,15 +8,10 @@
     <item
         android:id="@+id/action_2"
         android:enabled="true"
-        android:icon="@drawable/ic_tab2"
-        android:title="커뮤니티" />
-    <item
-        android:id="@+id/action_3"
-        android:enabled="true"
         android:icon="@drawable/ic_tab3"
         android:title="퀴즈" />
     <item
-        android:id="@+id/action_4"
+        android:id="@+id/action_3"
         android:enabled="true"
         android:icon="@drawable/ic_tab4"
         android:title="마이페이지" />

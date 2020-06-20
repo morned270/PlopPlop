@@ -58,6 +58,8 @@ public class MainActivity extends Fragment{
             public void onClick(View v) {
                 //액티비티 전환 Intent 정의
                 Intent intent = new Intent(getActivity(), Logbook2Activity.class);
+                intent.putExtra("userID", userID);
+                intent.putExtra("userLog", userLog);
                 startActivity(intent);
             }
         });
