@@ -223,6 +223,7 @@ public class Logbook2Activity extends AppCompatActivity {
                     Intent intent = new Intent(Logbook2Activity.this, Logbook3Activity.class);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
+
                 }
             }
         });
