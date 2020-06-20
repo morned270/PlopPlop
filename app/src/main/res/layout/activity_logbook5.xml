@@ -193,7 +193,8 @@
                             android:id="@+id/et_temperature"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:inputType="number"/>
 
                         <View
                             android:layout_width="0dp"
@@ -256,7 +257,8 @@
                             android:id="@+id/et_weight"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:inputType="number"/>
 
 
                     </LinearLayout>
@@ -329,7 +331,8 @@
                             android:id="@+id/et_enterpressure"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="left" />
+                            android:layout_gravity="left"
+                            android:inputType="number"/>
 
                         <View
                             android:layout_width="0dp"
@@ -340,7 +343,8 @@
                             android:id="@+id/et_view"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:inputType="number"/>
 
                         <EditText
                             android:id="@+id/et_wave"
@@ -357,7 +361,8 @@
                             android:id="@+id/et_exitpressure"
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="right" />
+                            android:layout_gravity="right"
+                            android:inputType="number"/>
 
                     </LinearLayout>
                     <!--input 끝-->
@@ -396,7 +401,8 @@
                             android:id="@+id/et_maxdepth"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="left" />
+                            android:layout_gravity="left"
+                            android:inputType="number"/>
 
                         <View
                             android:layout_width="0dp"
@@ -407,7 +413,8 @@
                             android:id="@+id/et_avedepth"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="right" />
+                            android:layout_gravity="right"
+                            android:inputType="number"/>
 
                     </LinearLayout>
                     <!--최대수심, 평균수심 edittext 끝-->
