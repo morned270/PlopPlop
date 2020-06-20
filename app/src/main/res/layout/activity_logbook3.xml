@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Logbook3Activity"
     android:orientation="vertical"
-    android:layout_margin="30dp">
+    android:padding="30dp"
+    android:background="@color/colorSand">
 
     <TextView
         android:layout_width="match_parent"
@@ -59,7 +60,7 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/switchlogview"
             android:text="지도"
-            android:textColor="#3aefa1"
+            android:textColor="#50BEBE"
             android:textSize="15dp"
             android:textStyle="bold" />
 

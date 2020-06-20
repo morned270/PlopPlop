@@ -8,41 +8,51 @@
     android:orientation="vertical"
     android:layout_margin="30dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="내 로그북"
-        android:layout_marginBottom="0dp"/>
-
-    <RelativeLayout
-        android:layout_width="331dp"
-        android:layout_height="36dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="102dp"
+        android:gravity="center"
         android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="내 "
+            android:textSize="40dp" />
 
         <TextView
             android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:text="숫자"
-            android:textSize="15dp" />
+            android:textSize="40dp" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="번째 로그북"
+            android:textSize="40dp" />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="yyyy-MM-dd" />
+        android:text="yyyy-MM-dd"
+        android:textColor="#506EA5" />
 
     <TextView
         android:id="@+id/tv_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="필리핀, 말라파스쿠아" />
+        android:text="필리핀, 말라파스쿠아"
+        android:textColor="#506EA5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -99,7 +109,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="다이빙 위치" />
+                            android:text="다이빙 위치"
+                            android:textColor="#50BEBE" />
 
                         <View
                             android:layout_width="0dp"
@@ -127,7 +138,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="다이빙 포인트" />
+                            android:text="다이빙 포인트"
+                            android:textColor="#50BEBE" />
 
                         <View
                             android:layout_width="0dp"
@@ -166,7 +178,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="입수시간" />
+                            android:text="입수시간"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -177,7 +190,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="수면온도" />
+                            android:text="수면온도"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -188,7 +202,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="출수시간" />
+                            android:text="출수시간"
+                            android:textColor="#D29953" />
 
                     </LinearLayout>
                     <!--입수 출수시간 text 끝-->
@@ -204,6 +219,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
+                            android:gravity="left"
                             android:inputType="time" />
 
                         <View
@@ -213,9 +229,10 @@
 
                         <TextView
                             android:id="@+id/tv_temperature"
-                            android:layout_width="100dp"
+                            android:layout_width="39dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:gravity="right" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -232,6 +249,7 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
+                            android:gravity="right"
                             android:inputType="time" />
 
                     </LinearLayout>
@@ -247,7 +265,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="수면휴식시간" />
+                            android:text="수면휴식시간"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -258,7 +277,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="웨이트 무게" />
+                            android:text="웨이트 무게"
+                            android:textColor="#D29953" />
 
                     </LinearLayout>
                     <!--입수 출수시간 text 끝-->
@@ -274,6 +294,7 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
+                            android:gravity="left"
                             android:inputType="time" />
 
                         <View
@@ -283,10 +304,11 @@
 
                         <TextView
                             android:id="@+id/tv_weight"
-                            android:layout_width="150dp"
+                            android:layout_width="38dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:inputType="number"/>
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -322,7 +344,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="입수공기압" />
+                            android:text="입수공기압"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -333,13 +356,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="시야" />
+                            android:text="시야"
+                            android:textColor="@color/colorWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="    파도" />
+                            android:text="    파도"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -350,7 +375,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="출수공기압" />
+                            android:text="출수공기압"
+                            android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
                     <!--text 끝-->
@@ -367,7 +393,8 @@
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="number"/>
+                            android:gravity="right"
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -384,7 +411,8 @@
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:inputType="number"/>
+                            android:gravity="right"
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -407,7 +435,8 @@
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="number"/>
+                            android:gravity="right"
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -427,7 +456,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="최대수심" />
+                            android:text="최대수심"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -438,7 +468,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="평균수심" />
+                            android:text="평균수심"
+                            android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
                     <!--최대수심, 평균수심 text 끝-->
@@ -451,10 +482,11 @@
 
                         <TextView
                             android:id="@+id/tv_maxdepth"
-                            android:layout_width="100dp"
+                            android:layout_width="38dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:inputType="number"/>
+                            android:gravity="right"
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -471,7 +503,8 @@
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:inputType="number"/>
+                            android:gravity="right"
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -491,7 +524,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="안전정지준수" />
+                            android:text="안전정지준수"
+                            android:textColor="@color/colorWhite" />
 
                         <CheckBox
                             android:id="@+id/cb_stop"
@@ -510,7 +544,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="상승속도준수" />
+                            android:text="상승속도준수"
+                            android:textColor="@color/colorWhite" />
 
                         <CheckBox
                             android:id="@+id/cb_speed"
@@ -535,14 +570,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:text="메모" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:text="*관찰한 수중생물, 느낀 점, etc"
-                        android:textSize="10dp" />
+                        android:text="메모"
+                        android:textColor="#506EA5" />
 
                     <TextView
                         android:id="@+id/tv_memo"
