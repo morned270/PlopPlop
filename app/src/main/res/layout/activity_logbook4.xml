@@ -306,7 +306,8 @@
                             android:id="@+id/tv_weight"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:inputType="number"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -386,7 +387,8 @@
                             android:id="@+id/tv_enterpressure"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="left" />
+                            android:layout_gravity="left"
+                            android:inputType="number"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -402,7 +404,8 @@
                             android:id="@+id/tv_view"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:inputType="number"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -424,7 +427,8 @@
                             android:id="@+id/tv_exitpressure"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="right" />
+                            android:layout_gravity="right"
+                            android:inputType="number"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -470,7 +474,8 @@
                             android:id="@+id/tv_maxdepth"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="left" />
+                            android:layout_gravity="left"
+                            android:inputType="number"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -486,7 +491,8 @@
                             android:id="@+id/tv_avedepth"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="right" />
+                            android:layout_gravity="right"
+                            android:inputType="number"/>
 
                         <TextView
                             android:layout_width="wrap_content"
