@@ -11,9 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
@@ -26,17 +28,26 @@ import java.util.List;
 
 public class Logbook3Activity extends FragmentActivity implements OnMapReadyCallback {
 
-    String et_location = "보홀"; //db에서 값을 받으면
-
-    String location[] = {"필리핀", "보홀", "말라파스쿠아"}; //주소
-    double latitude[]  = {10.277600, 9.911736, 11.336457}; //경도
-    double longitude[] =  {123.972569, 124.217833, 10.415150}; //위도
-
+    String[] location;
+    String[] latitude;
+    String[] longitude;
     Switch switchlogview;
+    TextView tv_log;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook3);
+
+        Intent intent = getIntent();
+        final String userID = intent.getStringExtra("userID");
+        final int userLog = intent.getIntExtra("userLog", 9);
+
+        tv_log = findViewById(R.id.tv_log);
+        tv_log.setText(String.valueOf(userLog) + "회");
+
+
         MapFragment mapFragment = (MapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
@@ -54,6 +65,8 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
 
                 } else {
                     Intent intent = new Intent(Logbook3Activity.this, Logbook2Activity.class);
+                    intent.putExtra("userID", userID);
+                    intent.putExtra("userLog", userLog);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                     finish();
@@ -68,14 +81,42 @@ public class Logbook3Activity extends FragmentActivity implements OnMapReadyCall
     public void onMapReady(@NonNull NaverMap naverMap) {
         // ...
 
+
+        String[] logLocation = {"필리핀 보홀", "한국 제주도 송악산","말레이시아 시파단섬", "이집트 홍해", "한국 울릉도"};
+        location = getResources().getStringArray(R.array.loca_name);
+        latitude = getResources().getStringArray(R.array.loca_Latitude);     //위도
+        longitude = getResources().getStringArray(R.array.loca_Longitude);   //경도
+
         Marker marker[] = new Marker[location.length];
+
         for(int i=0; i<location.length; i++){
             marker[i] = new Marker();
-            if(et_location == location[i]){
-                marker[i].setPosition(new LatLng(latitude[i], longitude[i]));
+            if(logLocation[0].equals(location[i])){
+                marker[i].setPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])));
                 marker[i].setCaptionText(location[i]);
                 marker[i].setMap(naverMap);
             }
+            if(logLocation[1].equals(location[i])){
+                marker[i].setPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])));
+                marker[i].setCaptionText(location[i]);
+                marker[i].setMap(naverMap);
+            }
+            if(logLocation[2].equals(location[i])){
+                marker[i].setPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])));
+                marker[i].setCaptionText(location[i]);
+                marker[i].setMap(naverMap);
+            }
+            if(logLocation[3].equals(location[i])){
+                marker[i].setPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])));
+                marker[i].setCaptionText(location[i]);
+                marker[i].setMap(naverMap);
+            }
+            if(logLocation[4].equals(location[i])){
+                marker[i].setPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])));
+                marker[i].setCaptionText(location[i]);
+                marker[i].setMap(naverMap);
+            }
+
         }
 
     }

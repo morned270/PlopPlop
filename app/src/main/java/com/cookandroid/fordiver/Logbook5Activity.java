@@ -184,7 +184,7 @@ public class Logbook5Activity extends AppCompatActivity {
 
 
                                 /*사용자의 로그수 수정하기 시작 코드*/
-                                int newLog = logNumber;
+                                final int newLog = logNumber;
                                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
@@ -193,6 +193,9 @@ public class Logbook5Activity extends AppCompatActivity {
                                             boolean success = jsonObject.getBoolean("success");
                                             if(success){    // 로그수 수정에 성공한 경우
                                                 Toast.makeText(getApplicationContext(), "로그수 수정에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(Logbook5Activity.this, MenuActivity.class);
+                                                intent.putExtra("userLog", newLog);
+                                                startActivity(intent);
                                                 finish();
 
                                             }

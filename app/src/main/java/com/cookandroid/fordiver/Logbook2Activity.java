@@ -142,7 +142,7 @@ public class Logbook2Activity extends AppCompatActivity {
         if(imgFile5.exists()){
             Bitmap myBitmap = BitmapFactory.decodeFile(imgFile5.getAbsolutePath());
             Drawable drawable = new BitmapDrawable(getResources(), myBitmap);
-            adapter.addItem(drawable, "5", "2020-06-14", "한국 울릉도");
+            adapter.addItem(drawable, "5", "2020-06-20", "한국 울릉도");
         }
 
 

@@ -81,15 +81,20 @@
 
                     <LinearLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="136dp"
+                        android:layout_height="150dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="구글맵 API" />
+                        <fragment xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/map"
+                            android:name="com.naver.maps.map.MapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:navermap_latitude="10.277600"
+                            app:navermap_longitude="123.972569"
+                            app:navermap_mapType="Basic"
+                            app:navermap_zoom="3" />
 
                     </LinearLayout>
 

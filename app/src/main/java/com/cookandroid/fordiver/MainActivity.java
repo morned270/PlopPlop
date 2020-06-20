@@ -49,6 +49,7 @@ public class MainActivity extends Fragment{
                 intent.putExtra("userID", userID);
                 intent.putExtra("userLog", userLog);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 

@@ -3,34 +3,50 @@ package com.cookandroid.fordiver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.annotation.NonNull;
+import android.support.annotation.UiThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
+import com.naver.maps.map.MapFragment;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.overlay.Marker;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 
-public class Logbook4Activity extends AppCompatActivity {
+public class Logbook4Activity extends AppCompatActivity implements OnMapReadyCallback {
 
     private TextView tv_number, tv_date;
     private TextView tv_location, tv_locationtype, tv_point, tv_temperature, tv_entertime, tv_exittime, tv_resttime, tv_weight, tv_enterpressure, tv_exitpressure;
     private TextView tv_view, tv_wave, tv_maxdepth, tv_avedepth, tv_memo;
     private CheckBox cb_stop, cb_speed;
 
+    String[] location;
+    String[] latitude;
+    String[] longitude;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {    //onCreate 메소드
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logbook4);
+
 
         tv_number = findViewById(R.id.tv_number);
         tv_date = findViewById(R.id.tv_date);
@@ -110,5 +126,38 @@ public class Logbook4Activity extends AppCompatActivity {
 
         }
 
+        MapFragment mapFragment = (MapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        if (mapFragment == null) {
+            mapFragment = MapFragment.newInstance();
+            getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+        }
+
+        mapFragment.getMapAsync(this);
+
+
     }
+
+    @UiThread
+    @Override
+    public void onMapReady(@NonNull NaverMap naverMap) {
+        // ...
+        String logLocation = tv_location.getText().toString();
+        location = getResources().getStringArray(R.array.loca_name);
+        latitude = getResources().getStringArray(R.array.loca_Latitude);     //위도
+        longitude = getResources().getStringArray(R.array.loca_Longitude);   //경도
+
+
+        Marker marker[] = new Marker[location.length];
+        for(int i=0; i<location.length; i++){
+            marker[i] = new Marker();
+            if(logLocation.equals(location[i])){
+                naverMap.setCameraPosition(new CameraPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])), 3));
+                marker[i].setPosition(new LatLng(Double.parseDouble(latitude[i]), Double.parseDouble(longitude[i])));
+                marker[i].setCaptionText(location[i]);
+                marker[i].setMap(naverMap);
+            }
+
+        }
+    }
+
 }
