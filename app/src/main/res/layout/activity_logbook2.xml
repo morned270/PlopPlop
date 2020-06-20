@@ -12,16 +12,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="내 로그북"
-
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/binggrae"
-        android:layout_marginBottom="40dp"/>
+
+        android:text="내 로그북"
+        android:textSize="40dp" />
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -50,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:checked="true"
+            android:checked="false"
             android:text=""
             android:textOff=""
             android:textOn=""
