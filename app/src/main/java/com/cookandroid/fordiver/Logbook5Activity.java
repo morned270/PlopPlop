@@ -46,7 +46,6 @@ public class Logbook5Activity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 672;
     private String imageFilePath;
     private Uri photoUri;
-    public int i = 1;
     private Button btn_capture;
 
 
@@ -55,6 +54,9 @@ public class Logbook5Activity extends AppCompatActivity {
     private EditText et_view, et_wave, et_maxdepth, et_avedepth, et_memo;
     private CheckBox cb_stop, cb_speed;
     private Button btn_register;
+
+
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +83,6 @@ public class Logbook5Activity extends AppCompatActivity {
                     File photoFile = null;
                     try{
                         photoFile = createImageFile();
-                        i++;
                     } catch(IOException e){
 
                     }
@@ -116,7 +117,7 @@ public class Logbook5Activity extends AppCompatActivity {
         et_memo = findViewById(R.id.et_memo);
 
         Intent intent = getIntent();
-        final String userID = intent.getStringExtra("userID");
+        userID = intent.getStringExtra("userID");
         int userLog = intent.getIntExtra("userLog", 9);
         tv_number.setText(String.valueOf(userLog + 1));
 
@@ -238,7 +239,7 @@ public class Logbook5Activity extends AppCompatActivity {
     }
 
     private File createImageFile() throws IOException {
-        String imageFileName = "Picture" + String.valueOf(i) + ".jpg";
+        String imageFileName = userID + "_log" + tv_number.getText().toString() + ".jpg";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = new File(storageDir, imageFileName);
         imageFilePath = image.getAbsolutePath();
