@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Logbook5Activity"
     android:orientation="vertical"
-    android:background="@color/colorSand"
     android:padding="30dp">
 
     <LinearLayout
@@ -35,7 +34,8 @@
         android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="오늘 날짜 yyyy-MM-dd" />
+        android:text="오늘 날짜 yyyy-MM-dd"
+        android:textColor="#506EA5" />
 
     <EditText
         android:id="@+id/et_location"
@@ -78,7 +78,8 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="left"
                             android:gravity="center_vertical"
-                            android:text="다이빙 위치" />
+                            android:text="다이빙 위치"
+                            android:textColor="#50BEBE" />
 
                         <View
                             android:layout_width="0dp"
@@ -107,7 +108,8 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="left"
                             android:gravity="center_vertical"
-                            android:text="다이빙 포인트" />
+                            android:text="다이빙 포인트"
+                            android:textColor="#50BEBE" />
 
                         <View
                             android:layout_width="0dp"
@@ -147,7 +149,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="입수시간" />
+                            android:text="입수시간"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -158,7 +161,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="수면온도" />
+                            android:text="수면온도"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -169,7 +173,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="출수시간" />
+                            android:text="출수시간"
+                            android:textColor="#D29953" />
 
                     </LinearLayout>
                     <!--입수 출수시간 text 끝-->
@@ -227,7 +232,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="수면휴식시간" />
+                            android:text="수면휴식시간"
+                            android:textColor="#D29953" />
 
                         <View
                             android:layout_width="0dp"
@@ -238,7 +244,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="웨이트 무게" />
+                            android:text="웨이트 무게"
+                            android:textColor="#D29953" />
 
                     </LinearLayout>
                     <!--입수 출수시간 text 끝-->
@@ -298,7 +305,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="입수공기압" />
+                            android:text="입수공기압"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -309,13 +317,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="시야      " />
+                            android:text="시야      "
+                            android:textColor="@color/colorWhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="      파도" />
+                            android:text="      파도"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -326,7 +336,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="출수공기압" />
+                            android:text="출수공기압"
+                            android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
                     <!--text 끝-->
@@ -393,7 +404,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="최대수심" />
+                            android:text="최대수심"
+                            android:textColor="@color/colorWhite" />
 
                         <View
                             android:layout_width="0dp"
@@ -404,7 +416,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="평균수심" />
+                            android:text="평균수심"
+                            android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
                     <!--최대수심, 평균수심 text 끝-->
@@ -448,7 +461,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:text="안전정지준수" />
+                            android:text="안전정지준수"
+                            android:textColor="@color/colorWhite" />
 
                         <CheckBox
                             android:id="@+id/cb_stop"
@@ -466,7 +480,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:text="상승속도준수" />
+                            android:text="상승속도준수"
+                            android:textColor="@color/colorWhite" />
 
                         <CheckBox
                             android:id="@+id/cb_speed"
@@ -490,7 +505,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:text="메모" />
+                        android:text="메모"
+                        android:textColor="#506EA5" />
 
                     <EditText
                         android:id="@+id/et_memo"
